@@ -12,12 +12,14 @@ struct TextFieldStandart: View {
     
     let textForegroundColor: Color
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(headerText)
                 .foregroundColor(textForegroundColor)
                 .font(.headline)
+                
                 TextField(placeholder, text: $text)
-                    .padding()
+                    .frame(height: 50)
+                    .padding(.leading)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.gray, lineWidth: 1)
