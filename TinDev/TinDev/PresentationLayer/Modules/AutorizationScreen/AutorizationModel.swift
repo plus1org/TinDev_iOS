@@ -1,0 +1,5 @@
+//
+//  AutorizationModel.swift
+//
+
+import Foundation
