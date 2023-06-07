@@ -1,0 +1,5 @@
+//
+//  RegistrationModel.swift
+//
+
+import Foundation
