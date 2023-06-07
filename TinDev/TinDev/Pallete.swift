@@ -1,0 +1,5 @@
+//
+//  Pallete.swift
+//
+
+import Foundation

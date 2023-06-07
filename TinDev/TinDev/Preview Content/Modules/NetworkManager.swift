@@ -1,0 +1,5 @@
+//
+//  NetworkManager.swift
+//
+
+import Foundation
