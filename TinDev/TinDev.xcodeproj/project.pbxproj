@@ -19,6 +19,7 @@
 		5DFBA9382A307729002AF39A /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9372A307729002AF39A /* Pallete.swift */; };
 		5DFBA93A2A30773D002AF39A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9392A30773D002AF39A /* Images.swift */; };
 		5DFBA93C2A307748002AF39A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA93B2A307747002AF39A /* Strings.swift */; };
+		5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA93D2A307B5D002AF39A /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		5DFBA9372A307729002AF39A /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		5DFBA9392A30773D002AF39A /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		5DFBA93B2A307747002AF39A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		5DFBA93D2A307B5D002AF39A /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		5DF0DA862A3074D9000F3EFC /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5DFBA93F2A307B66002AF39A /* Components */,
 				5DF0DA762A306F35000F3EFC /* Modules */,
 			);
 			path = PresentationLayer;
@@ -197,6 +200,14 @@
 				5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */,
 			);
 			path = RegistrationScreen;
+			sourceTree = "<group>";
+		};
+		5DFBA93F2A307B66002AF39A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5DFBA93D2A307B5D002AF39A /* Buttons.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
+				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
 				5DFBA93A2A30773D002AF39A /* Images.swift in Sources */,
 				5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */,
 				5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */,
