@@ -17,7 +17,7 @@ struct CircleView: View, Hashable {
                     .resizable()
                     .scaledToFit()
                     .clipShape(Circle())
-                self.overlay(Circle().stroke(Color.gray, lineWidth: 0.5))
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 0.5))
                     .shadow(radius: 2)
                 
             } else {
