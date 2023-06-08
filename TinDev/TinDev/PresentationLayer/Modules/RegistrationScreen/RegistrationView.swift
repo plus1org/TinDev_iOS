@@ -6,10 +6,10 @@ import SwiftUI
 
 struct RegistrationView: View {
     
-    let photos = [CircleView(imageName: "swiftlogo"),
-                  CircleView(imageName: nil),
-                  CircleView(imageName: nil),
-                  CircleView(imageName: nil)]
+    let photos = [CircleView(imageName: "swiftlogo", figureType: .circle),
+                  CircleView(imageName: nil, figureType: .circle),
+                  CircleView(imageName: nil, figureType: .circle),
+                  CircleView(imageName: nil, figureType: .circle)]
     
     var body: some View {
         VStack(spacing: 20) {
