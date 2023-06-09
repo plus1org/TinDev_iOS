@@ -17,17 +17,17 @@ struct CircleView: View, Hashable {
                     .resizable()
                     .scaledToFit()
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 0.5))
+                    .overlay(Circle().stroke(Pallete.customGray, lineWidth: 0.5))
                     .shadow(radius: 2)
                 
             } else {
                 ZStack {
-                    Circle().foregroundColor(.gray)
+                    Circle().foregroundColor(Pallete.customGray)
                     Image(systemName: systemImage.rawValue)
                         .frame(width: 50, height: 50)
                 }.scaledToFit()
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 0.5))
+                    .overlay(Circle().stroke(Pallete.customGray, lineWidth: 0.5))
                     .shadow(radius: 2)
             }
             
@@ -44,10 +44,12 @@ struct CircleView: View, Hashable {
             } else {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.gray)
-                        .frame(width: 50, height: 50)
+                        .fill(Pallete.customGray)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     Image(systemName: "plus")
-                        .foregroundColor(.black)
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(Pallete.customBlack)
+                    
                 }
             }
         }

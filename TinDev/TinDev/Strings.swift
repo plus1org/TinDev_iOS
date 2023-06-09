@@ -1,5 +1,0 @@
-//
-//  Strings.swift
-//
-
-import Foundation

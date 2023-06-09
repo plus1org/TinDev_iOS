@@ -13,13 +13,14 @@ struct RegistrationView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Регистрация")
-                .font(.title)
+            Text(Localizable.RegestrationModule.navRegTitle)
+                .font(Fonts.regular17)
            
             VStack(spacing: 25) {
                 VStack {
-                    Text("Ваши фотографии")
+                    Text(Localizable.RegestrationModule.photo)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(Fonts.regular15)
                         .padding(.leading)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -33,7 +34,8 @@ struct RegistrationView: View {
                     Button {
                         print("tap")
                     } label: {
-                        Text("Подтвердите личность")
+                        Text(Localizable.RegestrationModule.confirmID)
+                            .font(Fonts.regular14)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading)
                 }
@@ -41,19 +43,19 @@ struct RegistrationView: View {
                 VStack(spacing: 15) {
                     
                     HStack(spacing: 11) {
-                        TextFieldStandart(headerText: "Имя", text: "", placeholder: "Ваше имя", textForegroundColor: .black)
-                        TextFieldStandart(headerText: "Фамилия", text: "", placeholder: "Ваша фамилия", textForegroundColor: .black)
+                        TextFieldStandart(headerText: Localizable.RegestrationModule.name, text: "", placeholder: Localizable.RegestrationModule.namePlaceholder, textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.RegestrationModule.secondName, text: "", placeholder: Localizable.RegestrationModule.secondNamePlaceholder, textForegroundColor: Pallete.customBlack)
                     }
-                    TextFieldStandart(headerText: "Дата", text: "", placeholder: "Выберите дату", textForegroundColor: .black)
-                    TextFieldStandart(headerText: "Пароль", text: "", placeholder: "Введите пароль", textForegroundColor: .black)
-                    TextFieldStandart(headerText: "Подтверждение пароля", text: "", placeholder: "Подтвердите пароль", textForegroundColor: .black)
+                    TextFieldStandart(headerText: Localizable.RegestrationModule.date, text: "", placeholder: Localizable.RegestrationModule.datePlaceholder, textForegroundColor: Pallete.customBlack)
+                    TextFieldStandart(headerText: Localizable.RegestrationModule.password, text: "", placeholder: Localizable.RegestrationModule.passwordPlaceholder, textForegroundColor: Pallete.customBlack)
+                    TextFieldStandart(headerText: Localizable.RegestrationModule.confirmPassword, text: "", placeholder: Localizable.RegestrationModule.confirmPasswordPlaceholder, textForegroundColor: Pallete.customBlack)
                 }.padding(.horizontal)
             }
             Spacer()
             
             SolidButton(action: {
                 print("tapped")
-            }, title: "Зарегистрироваться", disabled: false, font: .title3, frameMaxWidth: .infinity, foregroundColor: .white)
+            }, title: Localizable.RegestrationModule.regButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
         }.background(.white)
     }
 }
