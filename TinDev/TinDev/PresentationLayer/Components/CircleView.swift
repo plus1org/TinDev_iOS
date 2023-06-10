@@ -23,8 +23,15 @@ struct CircleView: View, Hashable {
             } else {
                 ZStack {
                     Circle().foregroundColor(Pallete.customGray)
-                    Image(systemName: systemImage.rawValue)
-                        .frame(width: 50, height: 50)
+//                    Image(systemName: systemImage.rawValue)
+                    if systemImage == .plus {
+                        Image(systemName: systemImage.rawValue)
+                            .frame(width: 50, height: 50)
+                    } else {
+                        Image(systemName: "camera.fill")
+                            .scaleEffect(5)
+                            .foregroundColor(Pallete.customDarkGray)
+                    }
                 }.scaledToFit()
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Pallete.customGray, lineWidth: 0.5))
@@ -58,7 +65,7 @@ struct CircleView: View, Hashable {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(imageName: "swiftlogo", figureType: .circle)
+        CircleView(imageName: nil, systemImage: .camera, figureType: .circle)
     }
 }
 

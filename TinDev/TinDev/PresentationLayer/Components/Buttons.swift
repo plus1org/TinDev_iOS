@@ -67,7 +67,7 @@ struct BorderButton: View {
                                    foregroundColor: foregroundColor)
                 .background( // MARK: border
                     RoundedRectangle(cornerRadius: 15)
-                        .stroke(Pallete.mainColor, lineWidth: 5)
+                        .stroke(Pallete.mainColor, lineWidth: 1)
                 )
         }
         .disabled(disabled)
