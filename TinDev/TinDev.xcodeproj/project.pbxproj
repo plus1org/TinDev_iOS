@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D44C65E2A3435B100DBE84D /* ConfirmPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */; };
+		5D44C6602A3435C200DBE84D /* ConfirmPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */; };
+		5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */; };
 		5D5CAAB42A03A9C000E14945 /* TinDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAAB32A03A9C000E14945 /* TinDevApp.swift */; };
 		5D5CAAB82A03A9C100E14945 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CAAB72A03A9C100E14945 /* assets.xcassets */; };
 		5D5CAABB2A03A9C100E14945 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CAABA2A03A9C100E14945 /* Preview Assets.xcassets */; };
@@ -18,7 +21,7 @@
 		5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */; };
 		5DFBA9382A307729002AF39A /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9372A307729002AF39A /* Pallete.swift */; };
 		5DFBA93A2A30773D002AF39A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9392A30773D002AF39A /* Images.swift */; };
-		5DFBA93C2A307748002AF39A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA93B2A307747002AF39A /* Strings.swift */; };
+		5DFBA93C2A307748002AF39A /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA93B2A307747002AF39A /* Localizable.swift */; };
 		5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA93D2A307B5D002AF39A /* Buttons.swift */; };
 		5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9402A3084BD002AF39A /* View+Ext.swift */; };
 		5DFBA9432A3084D6002AF39A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9422A3084D6002AF39A /* NetworkManager.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonView.swift; sourceTree = "<group>"; };
+		5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonModel.swift; sourceTree = "<group>"; };
+		5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonViewModel.swift; sourceTree = "<group>"; };
 		5D5CAAB02A03A9C000E14945 /* TinDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CAAB32A03A9C000E14945 /* TinDevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinDevApp.swift; sourceTree = "<group>"; };
 		5D5CAAB72A03A9C100E14945 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +68,7 @@
 		5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DFBA9372A307729002AF39A /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		5DFBA9392A30773D002AF39A /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		5DFBA93B2A307747002AF39A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		5DFBA93B2A307747002AF39A /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		5DFBA93D2A307B5D002AF39A /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		5DFBA9402A3084BD002AF39A /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		5DFBA9422A3084D6002AF39A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -99,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D44C65C2A34358700DBE84D /* ConfirmPersonScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */,
+				5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */,
+				5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */,
+			);
+			name = ConfirmPersonScreen;
+			sourceTree = "<group>";
+		};
 		5D5CAAA72A03A9BF00E14945 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +175,7 @@
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5D44C65C2A34358700DBE84D /* ConfirmPersonScreen */,
 				5DFBA9362A307632002AF39A /* RegistrationScreen */,
 				5DF0DA772A306F6F000F3EFC /* AutorizationScreen */,
 			);
@@ -182,7 +199,7 @@
 				5DFBA9372A307729002AF39A /* Pallete.swift */,
 				5DFBA94E2A30E842002AF39A /* Fonts.swift */,
 				5DFBA9392A30773D002AF39A /* Images.swift */,
-				5DFBA93B2A307747002AF39A /* Strings.swift */,
+				5DFBA93B2A307747002AF39A /* Localizable.swift */,
 				5DF0DA7D2A3072AF000F3EFC /* Extensions */,
 			);
 			name = Common;
@@ -367,6 +384,7 @@
 				5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */,
 				5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */,
 				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
+				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
 				5DFBA9432A3084D6002AF39A /* NetworkManager.swift in Sources */,
 				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
@@ -375,11 +393,13 @@
 				5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */,
 				5DFBA9382A307729002AF39A /* Pallete.swift in Sources */,
 				5DFBA9472A30850A002AF39A /* AutorizationView.swift in Sources */,
+				5D44C65E2A3435B100DBE84D /* ConfirmPersonView.swift in Sources */,
 				5DFBA9492A308520002AF39A /* AutorizationViewModel.swift in Sources */,
 				5D5CAAB42A03A9C000E14945 /* TinDevApp.swift in Sources */,
 				5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */,
+				5D44C6602A3435C200DBE84D /* ConfirmPersonModel.swift in Sources */,
 				5DFBA94D2A30BD01002AF39A /* TextFieldStandart.swift in Sources */,
-				5DFBA93C2A307748002AF39A /* Strings.swift in Sources */,
+				5DFBA93C2A307748002AF39A /* Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
