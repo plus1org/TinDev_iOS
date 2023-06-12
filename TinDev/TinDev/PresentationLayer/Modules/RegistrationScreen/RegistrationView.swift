@@ -12,49 +12,51 @@ struct RegistrationView: View {
                   CircleView(imageName: nil, figureType: .circle)]
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Регистрация")
-                .font(.title)
-           
-            VStack(spacing: 25) {
-                VStack {
-                    Text("Ваши фотографии")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(photos, id: \.self) { photo in
-                                photo.frame(width: 105, height: 105)
+        NavigationView {
+            VStack(spacing: 20) {
+                VStack(spacing: 25) {
+                    VStack {
+                        Text(Localizable.RegestrationModule.photo)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(Fonts.regular15)
+                            .padding(.leading)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(photos, id: \.self) { photo in
+                                    photo.frame(width: 100, height: 105)
+                                }
                             }
-                        }
-                    }.padding(.leading)
-                    
-                    Button {
-                        print("tap")
-                    } label: {
-                        Text("Подтвердите личность")
-                    }.frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading)
-                }
-                
-                VStack(spacing: 15) {
-                    
-                    HStack(spacing: 11) {
-                        TextFieldStandart(headerText: "Имя", text: "", placeholder: "Ваше имя", textForegroundColor: .black)
-                        TextFieldStandart(headerText: "Фамилия", text: "", placeholder: "Ваша фамилия", textForegroundColor: .black)
+                        }.padding(.leading)
+                        
+                        NavigationLink {
+                            ConfirmPersonView()
+                        } label: {
+                            Text(Localizable.RegestrationModule.confirmID)
+                                .font(Fonts.regular14)
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading)
                     }
-                    TextFieldStandart(headerText: "Дата", text: "", placeholder: "Выберите дату", textForegroundColor: .black)
-                    TextFieldStandart(headerText: "Пароль", text: "", placeholder: "Введите пароль", textForegroundColor: .black)
-                    TextFieldStandart(headerText: "Подтверждение пароля", text: "", placeholder: "Подтвердите пароль", textForegroundColor: .black)
-                }.padding(.horizontal)
-            }
-            Spacer()
-            
-            SolidButton(action: {
-                print("tapped")
-            }, title: "Зарегистрироваться", disabled: false, font: .title3, frameMaxWidth: .infinity, foregroundColor: .white)
-        }.background(.white)
+                    
+                    VStack(spacing: 15) {
+                        
+                        HStack(spacing: 11) {
+                            TextFieldStandart(headerText: Localizable.RegestrationModule.name, text: "", placeholder: Localizable.RegestrationModule.namePlaceholder, textForegroundColor: Pallete.customBlack)
+                            TextFieldStandart(headerText: Localizable.RegestrationModule.secondName, text: "", placeholder: Localizable.RegestrationModule.secondNamePlaceholder, textForegroundColor: Pallete.customBlack)
+                        }
+                        TextFieldStandart(headerText: Localizable.RegestrationModule.date, text: "", placeholder: Localizable.RegestrationModule.datePlaceholder, textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.RegestrationModule.password, text: "", placeholder: Localizable.RegestrationModule.passwordPlaceholder, textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.RegestrationModule.confirmPassword, text: "", placeholder: Localizable.RegestrationModule.confirmPasswordPlaceholder, textForegroundColor: Pallete.customBlack)
+                    }.padding(.horizontal)
+                }
+                Spacer()
+                
+                SolidButton(action: {
+                    print("tapped")
+                }, title: Localizable.RegestrationModule.regButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
+            }.background(.white)
+                .navigationBarTitle(Localizable.RegestrationModule.navRegTitle, displayMode: .inline).font(Fonts.regular17)
+        }
     }
 }
 

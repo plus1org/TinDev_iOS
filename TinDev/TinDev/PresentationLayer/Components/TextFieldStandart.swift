@@ -15,14 +15,15 @@ struct TextFieldStandart: View {
         VStack(alignment: .leading) {
             Text(headerText)
                 .foregroundColor(textForegroundColor)
-                .font(.headline)
+                .font(Fonts.regular15)
                 
                 TextField(placeholder, text: $text)
                     .frame(height: 50)
+                    .font(Fonts.regular14)
                     .padding(.leading)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
+                            .stroke(Pallete.customGray, lineWidth: 1)
                     )
         }
     }
