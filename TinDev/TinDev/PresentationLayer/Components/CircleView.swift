@@ -17,17 +17,24 @@ struct CircleView: View, Hashable {
                     .resizable()
                     .scaledToFit()
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 0.5))
+                    .overlay(Circle().stroke(Pallete.customGray, lineWidth: 0.5))
                     .shadow(radius: 2)
                 
             } else {
                 ZStack {
-                    Circle().foregroundColor(.gray)
-                    Image(systemName: systemImage.rawValue)
-                        .frame(width: 50, height: 50)
+                    Circle().foregroundColor(Pallete.customGray)
+//                    Image(systemName: systemImage.rawValue)
+                    if systemImage == .plus {
+                        Image(systemName: systemImage.rawValue)
+                            .frame(width: 50, height: 50)
+                    } else {
+                        Image(systemName: "camera.fill")
+                            .scaleEffect(5)
+                            .foregroundColor(Pallete.customDarkGray)
+                    }
                 }.scaledToFit()
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 0.5))
+                    .overlay(Circle().stroke(Pallete.customGray, lineWidth: 0.5))
                     .shadow(radius: 2)
             }
             
@@ -44,10 +51,12 @@ struct CircleView: View, Hashable {
             } else {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.gray)
-                        .frame(width: 50, height: 50)
+                        .fill(Pallete.customGray)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     Image(systemName: "plus")
-                        .foregroundColor(.black)
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(Pallete.customBlack)
+                    
                 }
             }
         }
@@ -56,7 +65,7 @@ struct CircleView: View, Hashable {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(imageName: "swiftlogo", figureType: .circle)
+        CircleView(imageName: nil, systemImage: .camera, figureType: .circle)
     }
 }
 
