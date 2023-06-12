@@ -1,5 +1,5 @@
 //
 //  LoginScreenModel.swift
-// 
+//  
 
 import Foundation
