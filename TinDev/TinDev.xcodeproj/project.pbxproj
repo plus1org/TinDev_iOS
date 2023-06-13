@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5226D8042A371988009479B5 /* Modules in Resources */ = {isa = PBXBuildFile; fileRef = 5226D8032A371988009479B5 /* Modules */; };
 		52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7039C2A37850600E65C16 /* LoginScreenViewModel.swift */; };
 		52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7039E2A37851800E65C16 /* LoginScreenView.swift */; };
 		52A703A12A37852400E65C16 /* LoginScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A703A02A37852400E65C16 /* LoginScreenModel.swift */; };
@@ -57,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5226D8032A371988009479B5 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Modules; path = "../../../../TinDev/TinDev/Preview Content/Modules"; sourceTree = "<group>"; };
 		52A7039C2A37850600E65C16 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		52A7039E2A37851800E65C16 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		52A703A02A37852400E65C16 /* LoginScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenModel.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		5D5CAAB92A03A9C100E14945 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5226D8032A371988009479B5 /* Modules */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5226D8042A371988009479B5 /* Modules in Resources */,
 				5D5CAAB82A03A9C100E14945 /* assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
