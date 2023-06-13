@@ -39,4 +39,6 @@ enum Localizable {
         static let passwordRecovery = "Восстановить пароль"
         static let smsMessage = "На ваш номер отправлено СМС с инструкциями по восстановлению пароля"
     }
+
+    enum AutorizationModule { }
 }
