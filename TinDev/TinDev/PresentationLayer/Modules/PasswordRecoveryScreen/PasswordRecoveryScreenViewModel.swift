@@ -1,0 +1,5 @@
+//
+//  PasswordRecoveryScreenViewModel.swift
+// 
+
+import Foundation
