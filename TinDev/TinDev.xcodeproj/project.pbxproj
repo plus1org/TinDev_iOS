@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
 		5D44C65E2A3435B100DBE84D /* ConfirmPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */; };
 		5D44C6602A3435C200DBE84D /* ConfirmPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */; };
 		5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */; };
 		5D5CAAB42A03A9C000E14945 /* TinDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAAB32A03A9C000E14945 /* TinDevApp.swift */; };
 		5D5CAAB82A03A9C100E14945 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CAAB72A03A9C100E14945 /* assets.xcassets */; };
-		5D5CAABB2A03A9C100E14945 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CAABA2A03A9C100E14945 /* Preview Assets.xcassets */; };
 		5D5CAAC52A03A9C100E14945 /* TinDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAAC42A03A9C100E14945 /* TinDevTests.swift */; };
 		5D5CAACF2A03A9C100E14945 /* TinDevUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAACE2A03A9C100E14945 /* TinDevUITests.swift */; };
 		5D5CAAD12A03A9C100E14945 /* TinDevUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAAD02A03A9C100E14945 /* TinDevUITestsLaunchTests.swift */; };
@@ -51,13 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonView.swift; sourceTree = "<group>"; };
 		5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonModel.swift; sourceTree = "<group>"; };
 		5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonViewModel.swift; sourceTree = "<group>"; };
 		5D5CAAB02A03A9C000E14945 /* TinDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CAAB32A03A9C000E14945 /* TinDevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinDevApp.swift; sourceTree = "<group>"; };
 		5D5CAAB72A03A9C100E14945 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
-		5D5CAABA2A03A9C100E14945 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D5CAAC02A03A9C100E14945 /* TinDevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinDevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CAAC42A03A9C100E14945 /* TinDevTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinDevTests.swift; sourceTree = "<group>"; };
 		5D5CAACA2A03A9C100E14945 /* TinDevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinDevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +150,7 @@
 		5D5CAAB92A03A9C100E14945 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5D5CAABA2A03A9C100E14945 /* Preview Assets.xcassets */,
+				0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -355,8 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D5CAABB2A03A9C100E14945 /* Preview Assets.xcassets in Resources */,
 				5D5CAAB82A03A9C100E14945 /* assets.xcassets in Resources */,
+				0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,9 +561,10 @@
 				DEVELOPMENT_TEAM = YM5258CN94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -591,9 +592,10 @@
 				DEVELOPMENT_TEAM = YM5258CN94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
