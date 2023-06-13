@@ -1,0 +1,5 @@
+//
+//  LoginScreenModel.swift
+//  
+
+import Foundation

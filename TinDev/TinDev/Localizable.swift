@@ -23,5 +23,22 @@ enum Localizable {
         
     }
     
+    enum LoginModule {
+        static let loginTitle = "Вход"
+        static let phoneNumber = "Номер телефона"
+        static let password = "Пароль"
+        static let passwordPlaceholder = "Введите пароль"
+        static let forgotPassword = "Забыли пароль?"
+        static let regButton = "Зарегистрироваться"
+        static let loginButton = "Войти"
+    }
+    
+    enum PasswordRecoveryModule {
+        static let passwordRecoveryTitle = "Восстановление пароля"
+        static let phoneNumber = "Номер телефона"
+        static let passwordRecovery = "Восстановить пароль"
+        static let smsMessage = "На ваш номер отправлено СМС с инструкциями по восстановлению пароля"
+    }
+
     enum AutorizationModule { }
 }

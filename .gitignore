@@ -92,3 +92,7 @@ iOSInjectionProject/
 # macOS Temporary files
 
 .DS_Store
+
+# XCode Temporary files
+
+TinDev.xcodeproj/project.xcworkspace/xcuserdata
