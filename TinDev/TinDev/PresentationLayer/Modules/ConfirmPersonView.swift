@@ -4,23 +4,27 @@
 
 import SwiftUI
 
+
 struct ConfirmPersonView: View {
-    var body: some View {
-        NavigationView {
-            
-            VStack {
+    
+    @Environment(\.presentationMode) var presentationMode
+        
+        var body: some View {
+            NavigationView {
+                
                 VStack {
-                    Spacer()
-                    CircleView(imageName: nil, systemImage: .camera, figureType: .circle)
-                        .frame(width: 240, height: 240)
-                    
-                    NavigationLink {
-                        ConfirmPersonView()
-                    } label: {
-                        Text("Подтвердить позже")
-                            .font(Fonts.regular16)
-                    }.frame(maxWidth: .infinity)
-                }
+                    VStack {
+                        Spacer()
+                        CircleView(imageName: nil, systemImage: .camera, figureType: .circle)
+                            .frame(width: 240, height: 240)
+                        
+                        Button {
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Text("Подтвердить позже")
+                                .font(Fonts.regular16)
+                        }.frame(maxWidth: .infinity)
+                    }
                 
                 VStack(spacing: 14) {
                     Spacer()
