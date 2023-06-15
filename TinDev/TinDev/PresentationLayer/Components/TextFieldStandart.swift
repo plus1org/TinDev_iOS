@@ -35,6 +35,3 @@ struct TextFieldStandart_Previews: PreviewProvider {
         
     }
 }
-
-
-
