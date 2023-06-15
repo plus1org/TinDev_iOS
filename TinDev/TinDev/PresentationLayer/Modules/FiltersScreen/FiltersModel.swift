@@ -1,0 +1,5 @@
+//
+//  FiltersModel.swift
+//
+
+import Foundation

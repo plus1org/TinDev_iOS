@@ -41,4 +41,20 @@ enum Localizable {
     }
 
     enum AutorizationModule { }
+    
+    enum FiltersModule {
+        static let navTitle = "Фильтры"
+        static let changeCategory = "Выбрать категорию"
+        static let date = "Дата"
+        static let datePlaceholder = "Введите дату"
+        static let time = "Время"
+        static let timePlaceholder = "Введите время"
+        static let city = "Город"
+        static let cityPlaceholder = "Введите город"
+        static let metro = "Метро"
+        static let metroPlaceholder = "Введите метро"
+        static let district = "Район"
+        static let districtPlaceholder = "Введите район"
+        static let saveButton = "Сохранить"
+    }
 }
