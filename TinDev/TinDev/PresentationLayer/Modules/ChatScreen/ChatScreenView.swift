@@ -13,7 +13,7 @@ struct ChatScreenView: View {
     
     let chats: [Chat] = [
         Chat(personImage: "person1", personName: "Игорь Немцов", messageDate: "15 июн", lastMessageText: "Договорились, тогда я буду рассчитывать на тебя", messageCount: "1"),
-        Chat(personImage: "person2", personName: "Юлия Симонова", messageDate: "14 июн", lastMessageText: "Встретимся завтра", messageCount: "3"),
+        Chat(personImage: "person2", personName: "Юлия Симонова", messageDate: "14 июн", lastMessageText: "Встретимся завтра", messageCount: "0"),
         Chat(personImage: "person3", personName: "Илья Смирнов", messageDate: "13 июн", lastMessageText: "Спасибо за помощь", messageCount: "5")
     ]
 

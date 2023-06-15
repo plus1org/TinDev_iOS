@@ -20,7 +20,6 @@ struct ChatPreviewView: View {
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
                     Text(chat.personName)
-                    // Добавить жирный текст 15
                         .font(.headline)
                         .foregroundColor(.primary)
                     Spacer()
@@ -32,15 +31,16 @@ struct ChatPreviewView: View {
                     Text(chat.lastMessageText)
                         .font(Fonts.regular15)
                         .foregroundColor(.secondary)
-
+                 
                     Spacer()
-
+                    
                     Text(chat.messageCount)
                         .font(Fonts.regular12)
                         .foregroundColor(.white)
                         .frame(width: 22, height: 22)
                         .background(Color.blue)
                         .clipShape(Circle())
+                        .opacity(Int(chat.messageCount) == 0 ? 0 : 1)
                 }
             }
         }
