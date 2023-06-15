@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
 		52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7039C2A37850600E65C16 /* LoginScreenViewModel.swift */; };
 		52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7039E2A37851800E65C16 /* LoginScreenView.swift */; };
 		52A703A12A37852400E65C16 /* LoginScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A703A02A37852400E65C16 /* LoginScreenModel.swift */; };
 		52D1DA3B2A377B84001E8AD6 /* PasswordRecoveryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D1DA3A2A377B84001E8AD6 /* PasswordRecoveryScreenViewModel.swift */; };
 		52D1DA3D2A377B8C001E8AD6 /* PasswordRecoveryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D1DA3C2A377B8C001E8AD6 /* PasswordRecoveryScreenView.swift */; };
 		52D1DA3F2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D1DA3E2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift */; };
-		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
 		5D44C65E2A3435B100DBE84D /* ConfirmPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */; };
 		5D44C6602A3435C200DBE84D /* ConfirmPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */; };
 		5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */; };
@@ -22,6 +22,9 @@
 		5D5CAAC52A03A9C100E14945 /* TinDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAAC42A03A9C100E14945 /* TinDevTests.swift */; };
 		5D5CAACF2A03A9C100E14945 /* TinDevUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAACE2A03A9C100E14945 /* TinDevUITests.swift */; };
 		5D5CAAD12A03A9C100E14945 /* TinDevUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAAD02A03A9C100E14945 /* TinDevUITestsLaunchTests.swift */; };
+		5D6173762A3B18EA00D84BF5 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173752A3B18EA00D84BF5 /* FiltersView.swift */; };
+		5D6173792A3B191400D84BF5 /* FiltersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173782A3B191400D84BF5 /* FiltersModel.swift */; };
+		5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61737A2A3B192400D84BF5 /* FiltersViewModel.swift */; };
 		5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */; };
 		5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9322A307615002AF39A /* RegistrationView.swift */; };
 		5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */; };
@@ -57,13 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52A7039C2A37850600E65C16 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		52A7039E2A37851800E65C16 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		52A703A02A37852400E65C16 /* LoginScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenModel.swift; sourceTree = "<group>"; };
 		52D1DA3A2A377B84001E8AD6 /* PasswordRecoveryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryScreenViewModel.swift; sourceTree = "<group>"; };
 		52D1DA3C2A377B8C001E8AD6 /* PasswordRecoveryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryScreenView.swift; sourceTree = "<group>"; };
 		52D1DA3E2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryScreenModel.swift; sourceTree = "<group>"; };
-		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D44C65D2A3435B100DBE84D /* ConfirmPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonView.swift; sourceTree = "<group>"; };
 		5D44C65F2A3435C200DBE84D /* ConfirmPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonModel.swift; sourceTree = "<group>"; };
 		5D44C6612A3435D600DBE84D /* ConfirmPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPersonViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +78,9 @@
 		5D5CAACA2A03A9C100E14945 /* TinDevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinDevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CAACE2A03A9C100E14945 /* TinDevUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinDevUITests.swift; sourceTree = "<group>"; };
 		5D5CAAD02A03A9C100E14945 /* TinDevUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinDevUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D6173752A3B18EA00D84BF5 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		5D6173782A3B191400D84BF5 /* FiltersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModel.swift; sourceTree = "<group>"; };
+		5D61737A2A3B192400D84BF5 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
 		5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		5DFBA9322A307615002AF39A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +211,16 @@
 			path = TinDevUITests;
 			sourceTree = "<group>";
 		};
+		5D6173772A3B18F000D84BF5 /* FiltersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5D6173782A3B191400D84BF5 /* FiltersModel.swift */,
+				5D6173752A3B18EA00D84BF5 /* FiltersView.swift */,
+				5D61737A2A3B192400D84BF5 /* FiltersViewModel.swift */,
+			);
+			path = FiltersScreen;
+			sourceTree = "<group>";
+		};
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +229,7 @@
 				5DF0DA772A306F6F000F3EFC /* AutorizationScreen */,
 				52A7039B2A3784E200E65C16 /* LoginScreen */,
 				52D1DA392A377B4B001E8AD6 /* PasswordRecoveryScreen */,
+				5D6173772A3B18F000D84BF5 /* FiltersScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -416,7 +433,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6173762A3B18EA00D84BF5 /* FiltersView.swift in Sources */,
 				5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */,
+				5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */,
 				5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */,
 				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
 				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
@@ -424,6 +443,7 @@
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
 				52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */,
 				52D1DA3D2A377B8C001E8AD6 /* PasswordRecoveryScreenView.swift in Sources */,
+				5D6173792A3B191400D84BF5 /* FiltersModel.swift in Sources */,
 				5DFBA9432A3084D6002AF39A /* NetworkManager.swift in Sources */,
 				52D1DA3F2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift in Sources */,
 				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
