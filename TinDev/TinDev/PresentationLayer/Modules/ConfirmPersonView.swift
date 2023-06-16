@@ -21,7 +21,7 @@ struct ConfirmPersonView: View {
                         Button {
                             presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Text("Подтвердить позже")
+                            Text(Localizable.ConfirmPersonModule.skipConfirm)
                                 .font(Fonts.regular16)
                         }.frame(maxWidth: .infinity)
                     }
@@ -30,19 +30,19 @@ struct ConfirmPersonView: View {
                     Spacer()
                     BorderButton(action: {
                         //
-                    }, title: "Сделать фото", disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customBlack)
+                    }, title: Localizable.ConfirmPersonModule.makePhoto, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customBlack)
                     
                     SolidButton(action: {
                         //
-                    }, title: "Отправить", disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
+                    }, title: Localizable.ConfirmPersonModule.sendPhoto, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
                 }
-            } .navigationBarTitle("Подтверждение личности", displayMode: .inline)
+                } .navigationBarTitle(Localizable.ConfirmPersonModule.checkPerson, displayMode: .inline)
                 .toolbar {
                     ToolbarItemGroup(placement: .cancellationAction) {
                         Button {
-                            
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Image(systemName: "chevron.backward")
+                            Image(systemName: Images.arrowBack)
                                 .foregroundColor(Pallete.customBlack)
                         }
                     }

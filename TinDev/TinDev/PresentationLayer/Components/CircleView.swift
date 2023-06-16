@@ -23,12 +23,11 @@ struct CircleView: View, Hashable {
             } else {
                 ZStack {
                     Circle().foregroundColor(Pallete.customGray)
-//                    Image(systemName: systemImage.rawValue)
                     if systemImage == .plus {
                         Image(systemName: systemImage.rawValue)
                             .frame(width: 50, height: 50)
                     } else {
-                        Image(systemName: "camera.fill")
+                        Image(systemName: Images.camera)
                             .scaleEffect(5)
                             .foregroundColor(Pallete.customDarkGray)
                     }
@@ -53,7 +52,7 @@ struct CircleView: View, Hashable {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Pallete.customGray)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    Image(systemName: "plus")
+                    Image(systemName: Images.plus)
                         .frame(width: 50, height: 50)
                         .foregroundColor(Pallete.customBlack)
                     

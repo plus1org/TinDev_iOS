@@ -6,6 +6,8 @@ import SwiftUI
 
 struct RegistrationView: View {
     
+    @State private var isShowingFullScreen = false
+
     let photos = [CircleView(imageName: "swiftlogo", figureType: .circle),
                   CircleView(imageName: nil, figureType: .circle),
                   CircleView(imageName: nil, figureType: .circle),
@@ -29,13 +31,16 @@ struct RegistrationView: View {
                             }
                         }.padding(.leading)
                         
-                        NavigationLink {
-                            ConfirmPersonView()
+                        Button {
+                            self.isShowingFullScreen = true
                         } label: {
                             Text(Localizable.RegestrationModule.confirmID)
                                 .font(Fonts.regular14)
                         }.frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading)
+                            .fullScreenCover(isPresented: $isShowingFullScreen) {
+                                ConfirmPersonView()
+                                  }
                     }
                     
                     VStack(spacing: 15) {

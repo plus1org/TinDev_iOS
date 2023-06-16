@@ -42,6 +42,13 @@ enum Localizable {
 
     enum AutorizationModule { }
     
+    enum ConfirmPersonModule {
+        static let skipConfirm = "Подтвердить позже"
+        static let makePhoto = "Сделать фото"
+        static let sendPhoto = "Отправить"
+        static let checkPerson = "Подтверждение личности"
+    }
+    
     enum FiltersModule {
         static let navTitle = "Фильтры"
         static let changeCategory = "Выбрать категорию"

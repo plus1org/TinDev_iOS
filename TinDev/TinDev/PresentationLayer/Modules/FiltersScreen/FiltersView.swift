@@ -18,7 +18,7 @@ struct FiltersView: View {
                                 .padding(.leading)
                                 .foregroundColor(Pallete.customBlack)
                                 .font(Fonts.regular14)
-                            Image(systemName: "chevron.right")
+                            Image(systemName: Images.arrowNext)
                                 .padding(.trailing)
                                 .foregroundColor(Pallete.customBlack)
                         } .frame(maxWidth: .infinity, maxHeight: 50)

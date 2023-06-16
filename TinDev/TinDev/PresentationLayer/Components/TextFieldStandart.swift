@@ -25,11 +25,13 @@ struct TextFieldStandart: View {
             })
             .frame(height: 50)
             .font(Fonts.regular14)
-            .padding(.leading)
+            .padding(.horizontal)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(isEditing ? Pallete.customBlack : Pallete.customGray, lineWidth: 2)
             )
+        } .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }
 }
