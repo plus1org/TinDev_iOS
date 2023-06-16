@@ -30,6 +30,10 @@
 		5D6173762A3B18EA00D84BF5 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173752A3B18EA00D84BF5 /* FiltersView.swift */; };
 		5D6173792A3B191400D84BF5 /* FiltersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173782A3B191400D84BF5 /* FiltersModel.swift */; };
 		5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61737A2A3B192400D84BF5 /* FiltersViewModel.swift */; };
+		5D61737D2A3C9A9100D84BF5 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61737C2A3C9A9000D84BF5 /* CategoryModel.swift */; };
+		5D6173802A3C9AB700D84BF5 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61737F2A3C9AB700D84BF5 /* CategoryView.swift */; };
+		5D6173822A3C9AC800D84BF5 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173812A3C9AC800D84BF5 /* CategoryViewModel.swift */; };
+		5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */; };
 		5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */; };
 		5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9322A307615002AF39A /* RegistrationView.swift */; };
 		5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */; };
@@ -91,6 +95,10 @@
 		5D6173752A3B18EA00D84BF5 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		5D6173782A3B191400D84BF5 /* FiltersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModel.swift; sourceTree = "<group>"; };
 		5D61737A2A3B192400D84BF5 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
+		5D61737C2A3C9A9000D84BF5 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		5D61737F2A3C9AB700D84BF5 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		5D6173812A3C9AC800D84BF5 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		5DFBA9322A307615002AF39A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -241,6 +249,16 @@
 			path = FiltersScreen;
 			sourceTree = "<group>";
 		};
+		5D61737E2A3C9A9500D84BF5 /* CategoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5D61737C2A3C9A9000D84BF5 /* CategoryModel.swift */,
+				5D61737F2A3C9AB700D84BF5 /* CategoryView.swift */,
+				5D6173812A3C9AC800D84BF5 /* CategoryViewModel.swift */,
+			);
+			path = CategoryScreen;
+			sourceTree = "<group>";
+		};
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +269,7 @@
 				52A7039B2A3784E200E65C16 /* LoginScreen */,
 				52D1DA392A377B4B001E8AD6 /* PasswordRecoveryScreen */,
 				5D6173772A3B18F000D84BF5 /* FiltersScreen */,
+				5D61737E2A3C9A9500D84BF5 /* CategoryScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -322,6 +341,7 @@
 				5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */,
 				52CD9A222A3B0FE800C4727C /* SearchBarView.swift */,
 				52CD9A242A3B10DA00C4727C /* ChatPreviewView.swift */,
+				5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -458,6 +478,7 @@
 			files = (
 				5D6173762A3B18EA00D84BF5 /* FiltersView.swift in Sources */,
 				5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */,
+				5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */,
 				5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */,
 				5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */,
 				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
@@ -472,11 +493,13 @@
 				52CD9A232A3B0FE800C4727C /* SearchBarView.swift in Sources */,
 				5DFBA9432A3084D6002AF39A /* NetworkManager.swift in Sources */,
 				52D1DA3F2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift in Sources */,
+				5D6173822A3C9AC800D84BF5 /* CategoryViewModel.swift in Sources */,
 				52CD9A252A3B10DA00C4727C /* ChatPreviewView.swift in Sources */,
 				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
 				5DFBA93A2A30773D002AF39A /* Images.swift in Sources */,
 				5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */,
 				5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */,
+				5D61737D2A3C9A9100D84BF5 /* CategoryModel.swift in Sources */,
 				52D1DA3B2A377B84001E8AD6 /* PasswordRecoveryScreenViewModel.swift in Sources */,
 				5DFBA9382A307729002AF39A /* Pallete.swift in Sources */,
 				5DFBA9472A30850A002AF39A /* AutorizationView.swift in Sources */,
@@ -484,6 +507,7 @@
 				5DFBA9492A308520002AF39A /* AutorizationViewModel.swift in Sources */,
 				5D5CAAB42A03A9C000E14945 /* TinDevApp.swift in Sources */,
 				5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */,
+				5D6173802A3C9AB700D84BF5 /* CategoryView.swift in Sources */,
 				5D44C6602A3435C200DBE84D /* ConfirmPersonModel.swift in Sources */,
 				52A703A12A37852400E65C16 /* LoginScreenModel.swift in Sources */,
 				52CD9A1D2A3B004600C4727C /* ChatScreenView.swift in Sources */,

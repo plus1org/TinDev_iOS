@@ -64,4 +64,10 @@ enum Localizable {
         static let districtPlaceholder = "Введите район"
         static let saveButton = "Сохранить"
     }
+    
+    enum CategoryModule {
+        static let applyButton = "Применить"
+        static let addButton = "Добавить"
+        static let navTitle = "Категории"
+    }
 }

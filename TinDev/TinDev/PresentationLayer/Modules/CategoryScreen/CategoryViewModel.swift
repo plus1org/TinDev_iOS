@@ -1,0 +1,5 @@
+//
+//  CategoryViewModel.swift
+//
+
+import Foundation
