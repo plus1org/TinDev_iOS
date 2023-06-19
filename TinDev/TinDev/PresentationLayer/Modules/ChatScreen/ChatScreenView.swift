@@ -14,26 +14,6 @@ struct ChatView: View {
     @State private var messageText = ""
     
     var body: some View {
-           NavigationView {
-               VStack {
-                   SearchBarView(text: $searchText, placeholder: "Поиск по чатам")
-                   
-                   ScrollView {
-                       LazyVStack(alignment: .leading, spacing: 20) {
-                           ForEach(chats.filter { chat in
-                               self.searchText.isEmpty ? true : chat.personName.lowercased().contains(self.searchText.lowercased())
-                           }, id: \.personName) { chat in
-                               ChatPreviewView(chat: chat)
-                           }
-                       }
-                   }
-                   .padding(.top, 20)
-                   Spacer()
-               }
-               .navigationBarTitle("Чаты", displayMode: .inline)
-           }
-           .hideKeyboard()
-       }
         NavigationView {
             VStack {
                 ScrollView {
@@ -85,6 +65,7 @@ struct ChatView: View {
             }
             .navigationBarTitle(Text(chat.personName), displayMode: .inline)
         }
+        .hideKeyboard()
     }
 }
 
