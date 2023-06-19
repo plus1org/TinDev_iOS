@@ -56,9 +56,11 @@ struct FiltersView: View {
                     } label: {
                         Image(systemName: "chevron.backward")
                             .foregroundColor(Pallete.customBlack)
-                    }                }
+                    }
+                }
             }
         }
+        .hideKeyboard()
     }
 }
 

@@ -65,6 +65,7 @@ struct ChatView: View {
             }
             .navigationBarTitle(Text(chat.personName), displayMode: .inline)
         }
+        .hideKeyboard()
     }
 }
 
