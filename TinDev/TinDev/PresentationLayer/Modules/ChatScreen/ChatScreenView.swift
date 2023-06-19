@@ -36,6 +36,7 @@ struct ChatScreenView: View {
                }
                .navigationBarTitle("Чаты", displayMode: .inline)
            }
+           .hideKeyboard()
        }
 }
 

@@ -62,6 +62,7 @@ struct RegistrationView: View {
             }.background(.white)
                 .navigationBarTitle(Localizable.RegestrationModule.navRegTitle, displayMode: .inline).font(Fonts.regular17)
         }
+        .hideKeyboard()
     }
 }
 

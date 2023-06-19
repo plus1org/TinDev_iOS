@@ -30,8 +30,6 @@ struct TextFieldStandart: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(isEditing ? Pallete.customBlack : Pallete.customGray, lineWidth: 2)
             )
-        } .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }
 }
