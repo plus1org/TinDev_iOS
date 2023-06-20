@@ -5,12 +5,15 @@
 import SwiftUI
 
 struct CategoryView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             
             VStack {
                 VStack {
-                    Text("categories")
+                    CustomTable()
                 }
                 
                 Spacer()
@@ -28,20 +31,24 @@ struct CategoryView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .cancellationAction) {
                         Button {
-                            
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                             Image(systemName: Images.arrowBack)
                                 .foregroundColor(Pallete.customBlack)
-                        }                }
+                        }
+                    }
                 }
-
+            }
         }
-        
     }
-}
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
         CategoryView()
     }
 }
+
+
+
+
+
