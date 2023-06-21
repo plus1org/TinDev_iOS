@@ -48,13 +48,13 @@ struct FiltersView: View {
                     //
                 }, title: Localizable.FiltersModule.saveButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
             }
-            .navigationBarTitle("Фильтры", displayMode: .inline)
+            .navigationBarTitle(Localizable.FiltersModule.navTitle, displayMode: .inline)
             .toolbar {
                 ToolbarItemGroup(placement: .cancellationAction) {
                     Button {
                         
                     } label: {
-                        Image(systemName: "chevron.backward")
+                        Image(systemName: Images.arrowBack)
                             .foregroundColor(Pallete.customBlack)
                     }
                 }
