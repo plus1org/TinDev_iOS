@@ -21,23 +21,23 @@ struct ChatPreviewView: View {
                         .foregroundColor(.primary)
                     Spacer()
                     Text(chat.messageDate)
-                        .font(Fonts.regular13)
+                        .font(.footnote)
                         .foregroundColor(.secondary)
                 }
                 HStack {
-                    Text(chat.lastMessageText)
-                        .font(Fonts.regular15)
+                    Text(chat.messages.last?.text ?? "")
+                        .font(.body)
                         .foregroundColor(.secondary)
                  
                     Spacer()
                     
-                    Text(chat.messageCount)
-                        .font(Fonts.regular12)
+                    Text("\(chat.messages.count)")
+                        .font(.footnote)
                         .foregroundColor(.white)
                         .frame(width: 22, height: 22)
                         .background(Color.blue)
                         .clipShape(Circle())
-                        .opacity(Int(chat.messageCount) == 0 ? 0 : 1)
+                        .opacity(chat.messages.isEmpty ? 0 : 1)
                 }
             }
         }
@@ -50,8 +50,11 @@ struct ChatPreviewView_Previews: PreviewProvider {
         personImage: "person",
         personName: "Игорь Немцов",
         messageDate: "15 июн",
-        lastMessageText: "Договорились, тогда я буду рассчитывать на тебя",
-        messageCount: "1"
+        messages: [
+            Message(text: "Привет, как дела?", isUserMessage: false),
+            Message(text: "Привет, все отлично!", isUserMessage: true),
+            Message(text: "Договорились, тогда я буду рассчитывать на тебя", isUserMessage: false)
+        ]
     )
 
     static var previews: some View {

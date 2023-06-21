@@ -56,9 +56,11 @@ struct FiltersView: View {
                     } label: {
                         Image(systemName: Images.arrowBack)
                             .foregroundColor(Pallete.customBlack)
-                    }                }
+                    }
+                }
             }
         }
+        .hideKeyboard()
     }
 }
 
