@@ -40,7 +40,10 @@ enum Localizable {
         static let smsMessage = "На ваш номер отправлено СМС с инструкциями по восстановлению пароля"
     }
 
-    enum AutorizationModule { }
+    enum AutorizationModule {
+        static let registration = "Регистрация"
+        static let entrance = "Вход"
+    }
     
     enum ConfirmPersonModule {
         static let skipConfirm = "Подтвердить позже"

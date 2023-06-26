@@ -8,7 +8,7 @@ struct AutorizationView: View {
     var body: some View {
         VStack(spacing: 14) {
             SolidButton(action: {},
-                        title: "Регистрация",
+                        title: Localizable.AutorizationModule.registration,
                         disabled: false,
                         font: .headline,
                         frameMaxWidth: .infinity,
@@ -16,7 +16,7 @@ struct AutorizationView: View {
             )
             
             BorderButton(action: {},
-                         title: "Вход",
+                         title: Localizable.AutorizationModule.entrance,
                          disabled: false,
                          font: .headline,
                          frameMaxWidth: .infinity,
