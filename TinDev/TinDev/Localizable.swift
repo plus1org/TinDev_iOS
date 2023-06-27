@@ -73,4 +73,27 @@ enum Localizable {
         static let addButton = "Добавить"
         static let navTitle = "Категории"
     }
+    
+    enum CreateMeetModule {
+        static let navTitle = "Создание мероприятия"
+        static let addPhotos = "Добавьте фотографии"
+        static let meetName = "Название"
+        static let meetNamePlaceholder = "Введите название"
+        static let choiceCategory = "Выберите категорию"
+        static let date = "Дата"
+        static let datePlaceholder = "Введите дату"
+        static let time = "Время"
+        static let timePlaceholder = "Введите время"
+        static let city = "Город"
+        static let cityPlaceholder = "Введите город"
+        static let metro = "Метро"
+        static let metroPlaceholder = "Введите метро"
+        static let area = "Район"
+        static let areaPlaceholder = "Введите район"
+        static let discription = "Описание"
+        static let discriptionPlaceholder = "Введите описание"
+        static let save = "Сохранить"
+        
+    }
+    
 }
