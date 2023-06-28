@@ -9,7 +9,11 @@ import SwiftUI
 
 struct CreateMeetScreenView: View {
     
-//    @State private var isShowingFullScreen = false
+    //    @State private var isShowingFullScreen = false
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State private var isCategoryViewPresented = false
     
     let photos = [CircleView(imageName: "photo1", figureType: .square),
                   CircleView(imageName: nil, figureType: .square),
@@ -34,10 +38,13 @@ struct CreateMeetScreenView: View {
                         }
                     }
                     
-                    TextFieldStandart(headerText: Localizable.CreateMeetModule.meetName, text: "", placeholder: Localizable.CreateMeetModule.meetNamePlaceholder, textForegroundColor: Pallete.customBlack)
+                    TextFieldStandart(headerText: Localizable.CreateMeetModule.meetName,
+                                      text: "",
+                                      placeholder: Localizable.CreateMeetModule.meetNamePlaceholder,
+                                      textForegroundColor: Pallete.customBlack)
                     
                     
-                    Button { } label: {
+                    Button { self.isCategoryViewPresented = true } label: {
                         HStack(spacing: 30) {
                             Text(Localizable.FiltersModule.changeCategory)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -52,31 +59,54 @@ struct CreateMeetScreenView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Pallete.customDarkGray, lineWidth: 1)
                             )
+                    }.fullScreenCover(isPresented: $isCategoryViewPresented) {
+                        CategoryView()
                     } // Category + button
                     
                     HStack(spacing: 11) {
-                        TextFieldStandart(headerText: Localizable.CreateMeetModule.date, text: "", placeholder: Localizable.CreateMeetModule.datePlaceholder, textForegroundColor: Pallete.customBlack)
-                        TextFieldStandart(headerText: Localizable.CreateMeetModule.time, text: "", placeholder: Localizable.CreateMeetModule.timePlaceholder, textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.CreateMeetModule.date,
+                                          text: "",
+                                          placeholder: Localizable.CreateMeetModule.datePlaceholder,
+                                          textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.CreateMeetModule.time,
+                                          text: "",
+                                          placeholder: Localizable.CreateMeetModule.timePlaceholder,
+                                          textForegroundColor: Pallete.customBlack)
                     } // Date + time
                     HStack(spacing: 11) {
-                        TextFieldStandart(headerText: Localizable.CreateMeetModule.city, text: "", placeholder: Localizable.CreateMeetModule.cityPlaceholder, textForegroundColor: Pallete.customBlack)
-                        TextFieldStandart(headerText: Localizable.CreateMeetModule.metro, text: "", placeholder: Localizable.CreateMeetModule.metroPlaceholder, textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.CreateMeetModule.city,
+                                          text: "",
+                                          placeholder: Localizable.CreateMeetModule.cityPlaceholder,
+                                          textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.CreateMeetModule.metro,
+                                          text: "",
+                                          placeholder: Localizable.CreateMeetModule.metroPlaceholder,
+                                          textForegroundColor: Pallete.customBlack)
                     } // City + Metro
-                    TextFieldStandart(headerText: Localizable.CreateMeetModule.area, text: "", placeholder: Localizable.CreateMeetModule.areaPlaceholder, textForegroundColor: Pallete.customBlack)
-                    TextFieldStandart(headerText: Localizable.CreateMeetModule.discription, text: "", placeholder: Localizable.CreateMeetModule.discriptionPlaceholder, textForegroundColor: Pallete.customBlack)
+                    TextFieldStandart(headerText: Localizable.CreateMeetModule.area,
+                                      text: "",
+                                      placeholder: Localizable.CreateMeetModule.areaPlaceholder,
+                                      textForegroundColor: Pallete.customBlack)
+                    TextFieldStandart(headerText: Localizable.CreateMeetModule.discription,
+                                      text: "",
+                                      placeholder: Localizable.CreateMeetModule.discriptionPlaceholder,
+                                      textForegroundColor: Pallete.customBlack)
                 }.padding(.horizontal) //From photos To Discription
-
+                
                 Spacer()
                 
-                SolidButton(action: {
-                    print("tapped")
-                }, title: Localizable.CreateMeetModule.save, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
+                SolidButton(action: { presentationMode.wrappedValue.dismiss() },
+                            title: Localizable.CreateMeetModule.save,
+                            disabled: false,
+                            font: Fonts.regular16,
+                            frameMaxWidth: .infinity,
+                            foregroundColor: Pallete.customWhite)
             }.background(.white)
                 .navigationBarTitle(Localizable.CreateMeetModule.navTitle, displayMode: .inline).font(Fonts.regular17)
                 .toolbar {
                     ToolbarItemGroup(placement: .cancellationAction) {
                         Button {
-                            
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                             Image(systemName: Images.arrowBack)
                                 .foregroundColor(Pallete.customBlack)

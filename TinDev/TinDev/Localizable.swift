@@ -20,7 +20,6 @@ enum Localizable {
         static let confirmPassword = "Подтверждение пароля"
         static let confirmPasswordPlaceholder = "Подтвердите пароль"
         static let regButton = "Зарегистрироваться"
-        
     }
     
     enum LoginModule {
@@ -93,7 +92,6 @@ enum Localizable {
         static let discription = "Описание"
         static let discriptionPlaceholder = "Введите описание"
         static let save = "Сохранить"
-        
     }
     
     enum AllChatsModule {
@@ -111,6 +109,5 @@ enum Localizable {
         static let search = "Поиск"
         static let chat = "Чаты"
         static let profile = "Профиль"
-        
     }
 }

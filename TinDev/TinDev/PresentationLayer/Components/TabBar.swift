@@ -9,8 +9,34 @@ import SwiftUI
 
 
 struct SearchTabView: View {
+        
+    @State private var isCreateMeetScreenPresented = false
+    @State private var isFiltersViewPresented = false
+    @State private var isCategoryViewPresented = false
+    
     var body: some View {
-        Text("Tab 1")
+        VStack(spacing: 20) {
+            Button(action: {self.isCreateMeetScreenPresented = true}) {
+                Text(Localizable.CreateMeetModule.navTitle).font(Fonts.regular17)
+            }
+            .fullScreenCover(isPresented: $isCreateMeetScreenPresented) {
+                CreateMeetScreenView()
+            }
+            
+            Button(action: {self.isFiltersViewPresented = true}) {
+                Text(Localizable.FiltersModule.navTitle).font(Fonts.regular17)
+            }
+            .fullScreenCover(isPresented: $isFiltersViewPresented) {
+                FiltersView()
+            }
+            
+            Button(action: {self.isCategoryViewPresented = true}) {
+                Text(Localizable.CategoryModule.navTitle).font(Fonts.regular17)
+            }
+            .fullScreenCover(isPresented: $isCategoryViewPresented) {
+                CategoryView()
+            }
+        }
     }
 }
 
@@ -21,8 +47,15 @@ struct ChatTabView: View {
 }
 
 struct ProfileTabView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text("Tab 3")
+        Button {
+            presentationMode.wrappedValue.dismiss()
+        } label: {
+            Text(Localizable.LoginModule.loginTitle)
+        }
     }
 }
 
@@ -45,7 +78,7 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "person")
                     Text(Localizable.TabBar.profile)
-                
+                    
                 }
         }.accentColor(Pallete.mainColor)
     }
