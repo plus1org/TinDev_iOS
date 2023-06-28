@@ -6,6 +6,8 @@ import SwiftUI
 
 struct RegistrationView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var isShowingFullScreen = false
 
     let photos = [CircleView(imageName: "swiftlogo", figureType: .circle),
@@ -61,6 +63,16 @@ struct RegistrationView: View {
                 }, title: Localizable.RegestrationModule.regButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
             }.background(.white)
                 .navigationBarTitle(Localizable.RegestrationModule.navRegTitle, displayMode: .inline).font(Fonts.regular17)
+                .toolbar {
+                    ToolbarItemGroup(placement: .cancellationAction) {
+                        Button {
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: Images.arrowBack)
+                                .foregroundColor(Pallete.customBlack)
+                        }
+                    }
+                }
         }
         .hideKeyboard()
     }
