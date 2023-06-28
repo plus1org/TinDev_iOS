@@ -10,6 +10,7 @@ import SwiftUI
 struct AllChatsScreenView: View {
     
     @State private var searchText = ""
+    @State private var selectedChat: Chat?
     
     let chats: [Chat] = [
         Chat(isConfirmed: false, personImage: "person1", personName: "Игорь Немцов", messageDate: "15 июн", messages: [
@@ -36,8 +37,8 @@ struct AllChatsScreenView: View {
                     LazyVStack(alignment: .leading, spacing: 20) {
                         ForEach(chats.filter { chat in
                             self.searchText.isEmpty ? true : chat.personName.lowercased().contains(self.searchText.lowercased())
-                        }, id: \.personName) { chat in
-                            NavigationLink(destination: ChatView(chat: chat)) {
+                        }, id: \.id) { chat in
+                            Button(action: { selectedChat = chat }) {
                                 ChatPreviewView(chat: chat)
                             }
                         }
@@ -45,8 +46,12 @@ struct AllChatsScreenView: View {
                 }
                 .padding(.top, 20)
                 Spacer()
+                Divider()
             }
             .navigationBarTitle(Localizable.AllChatsModule.chats, displayMode: .inline)
+            .fullScreenCover(item: $selectedChat) { chat in
+                ChatView(chat: chat)
+            }
         }
     }
 }
