@@ -16,7 +16,7 @@ struct SearchTabView: View {
 
 struct ChatTabView: View {
     var body: some View {
-        Text("Tab 2")
+        AllChatsScreenView()
     }
 }
 

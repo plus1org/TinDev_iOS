@@ -9,16 +9,23 @@ import SwiftUI
 
 struct ChatView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var chat: Chat
     
     @State private var messageText = ""
     
     var body: some View {
-        NavigationView {
             VStack {
+                if !chat.isConfirmed {
+                    Text(Localizable.ChatModule.userIsNotConfirmed)
+                        .foregroundColor(Pallete.customRed)
+                        .font(Fonts.regular14)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    }
                 ScrollView {
                     Text("19 июня 2023 г.")
-                        .padding()
                         .font(Fonts.regular12)
                         .foregroundColor(Pallete.customDarkGray)
                     ForEach(chat.messages) { message in
@@ -42,9 +49,10 @@ struct ChatView: View {
                         .padding(.horizontal, 16)
                     }
                 }
+                Divider()
                 HStack {
                     VStack {
-                        TextField("Сообщение", text: $messageText)
+                        TextField(Localizable.ChatModule.message, text: $messageText)
                             .frame(height: 40)
                             .padding(.horizontal, 12)
                             .background(Pallete.customGray)
@@ -54,7 +62,7 @@ struct ChatView: View {
                         HStack {
                             Spacer()
                             Button(action: {}) {
-                                Text("Отправить")
+                                Text(Localizable.ChatModule.sendButton)
                                     .foregroundColor(Pallete.mainColor)
                             }
                             .padding(.trailing, 12)
@@ -64,14 +72,20 @@ struct ChatView: View {
                 .padding(10)
             }
             .navigationBarTitle(Text(chat.personName), displayMode: .inline)
-        }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(Pallete.customBlack)
+            })
         .hideKeyboard()
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var chat = Chat(
-        personImage: "person",
+        isConfirmed: false, personImage: "person",
         personName: "Игорь Немцов",
         messageDate: "15 июн",
         messages: [
