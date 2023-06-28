@@ -39,7 +39,7 @@ enum Localizable {
         static let passwordRecovery = "Восстановить пароль"
         static let smsMessage = "На ваш номер отправлено СМС с инструкциями по восстановлению пароля"
     }
-
+    
     enum AutorizationModule {
         static let registration = "Регистрация"
         static let entrance = "Вход"
@@ -93,7 +93,11 @@ enum Localizable {
         static let discription = "Описание"
         static let discriptionPlaceholder = "Введите описание"
         static let save = "Сохранить"
-        
-    }
     
+    enum TabBar {
+        static let search = "Поиск"
+        static let chat = "Чат"
+        static let profile = "Профиль"
+
+    }   
 }
