@@ -10,6 +10,7 @@
 		0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9702A49A7D400912AAC /* CreateMeetScreenModel.swift */; };
 		0C1AC9732A49A85000912AAC /* CreateMeetScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9722A49A85000912AAC /* CreateMeetScreenView.swift */; };
 		0C1AC9752A49A86900912AAC /* CreateMeetScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9742A49A86900912AAC /* CreateMeetScreenViewModel.swift */; };
+		0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9952A4C06CF00912AAC /* TabBar.swift */; };
 		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
 		528F7FA82A405481006A3F79 /* HideKeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */; };
 		528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */; };
@@ -79,6 +80,7 @@
 		0C1AC9702A49A7D400912AAC /* CreateMeetScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetScreenModel.swift; sourceTree = "<group>"; };
 		0C1AC9722A49A85000912AAC /* CreateMeetScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetScreenView.swift; sourceTree = "<group>"; };
 		0C1AC9742A49A86900912AAC /* CreateMeetScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetScreenViewModel.swift; sourceTree = "<group>"; };
+		0C1AC9952A4C06CF00912AAC /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardModifier.swift; sourceTree = "<group>"; };
 		528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewModel.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				52CD9A222A3B0FE800C4727C /* SearchBarView.swift */,
 				52CD9A242A3B10DA00C4727C /* ChatPreviewView.swift */,
 				5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */,
+				0C1AC9952A4C06CF00912AAC /* TabBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
 				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
+				0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
 				0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */,
 				52CD9A1B2A3B003E00C4727C /* AllChatsScreenViewModel.swift in Sources */,
