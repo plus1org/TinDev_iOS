@@ -28,6 +28,7 @@ struct ChatPreviewView: View {
                     Text(chat.messages.last?.text ?? "")
                         .font(.body)
                         .foregroundColor(.secondary)
+                        .multilineTextAlignment(.leading)
                  
                     Spacer()
                     
@@ -47,7 +48,7 @@ struct ChatPreviewView: View {
 
 struct ChatPreviewView_Previews: PreviewProvider {
     static var chat = Chat(
-        personImage: "person",
+        isConfirmed: true, personImage: "person",
         personName: "Игорь Немцов",
         messageDate: "15 июн",
         messages: [

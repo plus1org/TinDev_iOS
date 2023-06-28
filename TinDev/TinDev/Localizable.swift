@@ -93,11 +93,24 @@ enum Localizable {
         static let discription = "Описание"
         static let discriptionPlaceholder = "Введите описание"
         static let save = "Сохранить"
+        
+    }
+    
+    enum AllChatsModule {
+        static let search = "Поиск по чатам"
+        static let chats = "Чаты"
+    }
+    
+    enum ChatModule {
+        static let userIsNotConfirmed = "Пользователь не подтвержден, может быть мошенником"
+        static let message = "Сообщение"
+        static let sendButton = "Отправить"
+    }
     
     enum TabBar {
         static let search = "Поиск"
-        static let chat = "Чат"
+        static let chat = "Чаты"
         static let profile = "Профиль"
-
-    }   
+        
+    }
 }
