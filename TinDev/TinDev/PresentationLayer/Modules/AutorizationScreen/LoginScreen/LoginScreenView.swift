@@ -9,6 +9,9 @@ struct LoginScreenView: View {
     
     @State private var phoneNumber = ""
     @State private var password = ""
+    @State private var isPasswordRecoveryScreenPresented = false
+    @State private var isRegistrationScreenPresented = false
+    @State private var isTabBarPresented = false
     
     var body: some View {
         NavigationView {
@@ -28,19 +31,36 @@ struct LoginScreenView: View {
                                       textForegroundColor: Pallete.customBlack)
                     
                     HStack {
-                        Button(action: {}) {
+                        Button(action: {self.isPasswordRecoveryScreenPresented = true}) {
                             Text(Localizable.LoginModule.forgotPassword).font(Fonts.regular14)
+                        }
+                        .fullScreenCover(isPresented: $isPasswordRecoveryScreenPresented) {
+                            PasswordRecoveryScreenView()
                         }
                         Spacer()
                     }.padding(.leading)
                 }.padding()
                 Spacer()
                 VStack(spacing: 14) {
-                    BorderButton(action: {
-                    }, title: Localizable.LoginModule.regButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customBlack)
+                    BorderButton(action: {self.isRegistrationScreenPresented = true},
+                                 title: Localizable.LoginModule.regButton,
+                                 disabled: false,
+                                 font: Fonts.regular16,
+                                 frameMaxWidth: .infinity,
+                                 foregroundColor: Pallete.customBlack)
+                    .fullScreenCover(isPresented: $isRegistrationScreenPresented) {
+                        RegistrationView()
+                    }
                     
-                    SolidButton(action: {
-                    }, title: Localizable.LoginModule.loginButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
+                    SolidButton(action: {self.isTabBarPresented = true},
+                                title: Localizable.LoginModule.loginButton,
+                                disabled: false,
+                                font: Fonts.regular16,
+                                frameMaxWidth: .infinity,
+                                foregroundColor: Pallete.customWhite)
+                    .fullScreenCover(isPresented: $isTabBarPresented) {
+                        TabBarView()
+                    }
                 }.padding(.bottom)
             }
         }
