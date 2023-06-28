@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1AC9712A49A7D500912AAC /* SearchScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9702A49A7D400912AAC /* SearchScreenModel.swift */; };
-		0C1AC9732A49A85000912AAC /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9722A49A85000912AAC /* SearchScreenView.swift */; };
-		0C1AC9752A49A86900912AAC /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9742A49A86900912AAC /* SearchScreenViewModel.swift */; };
+		0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9702A49A7D400912AAC /* CreateMeetScreenModel.swift */; };
+		0C1AC9732A49A85000912AAC /* CreateMeetScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9722A49A85000912AAC /* CreateMeetScreenView.swift */; };
+		0C1AC9752A49A86900912AAC /* CreateMeetScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC9742A49A86900912AAC /* CreateMeetScreenViewModel.swift */; };
 		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
 		528F7FA82A405481006A3F79 /* HideKeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */; };
 		528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */; };
@@ -76,9 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1AC9702A49A7D400912AAC /* SearchScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenModel.swift; sourceTree = "<group>"; };
-		0C1AC9722A49A85000912AAC /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
-		0C1AC9742A49A86900912AAC /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
+		0C1AC9702A49A7D400912AAC /* CreateMeetScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetScreenModel.swift; sourceTree = "<group>"; };
+		0C1AC9722A49A85000912AAC /* CreateMeetScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetScreenView.swift; sourceTree = "<group>"; };
+		0C1AC9742A49A86900912AAC /* CreateMeetScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetScreenViewModel.swift; sourceTree = "<group>"; };
 		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardModifier.swift; sourceTree = "<group>"; };
 		528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewModel.swift; sourceTree = "<group>"; };
@@ -155,14 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C1AC96F2A49A73900912AAC /* SearchScreen */ = {
+		0C1AC96F2A49A73900912AAC /* CreateMeetScreen */ = {
 			isa = PBXGroup;
 			children = (
-				0C1AC9702A49A7D400912AAC /* SearchScreenModel.swift */,
-				0C1AC9722A49A85000912AAC /* SearchScreenView.swift */,
-				0C1AC9742A49A86900912AAC /* SearchScreenViewModel.swift */,
+				0C1AC9702A49A7D400912AAC /* CreateMeetScreenModel.swift */,
+				0C1AC9722A49A85000912AAC /* CreateMeetScreenView.swift */,
+				0C1AC9742A49A86900912AAC /* CreateMeetScreenViewModel.swift */,
 			);
-			path = SearchScreen;
+			path = CreateMeetScreen;
 			sourceTree = "<group>";
 		};
 		528F7FA92A40593C006A3F79 /* ChatScreen */ = {
@@ -296,7 +296,7 @@
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0C1AC96F2A49A73900912AAC /* SearchScreen */,
+				0C1AC96F2A49A73900912AAC /* CreateMeetScreen */,
 				528F7FA92A40593C006A3F79 /* ChatScreen */,
 				52CD9A192A3B000800C4727C /* AllChatsScreen */,
 				5D44C65C2A34358700DBE84D /* ConfirmPersonScreen */,
@@ -517,13 +517,13 @@
 				5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */,
 				5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */,
 				5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */,
-				0C1AC9752A49A86900912AAC /* SearchScreenViewModel.swift in Sources */,
+				0C1AC9752A49A86900912AAC /* CreateMeetScreenViewModel.swift in Sources */,
 				5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */,
 				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
 				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
-				0C1AC9712A49A7D500912AAC /* SearchScreenModel.swift in Sources */,
+				0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */,
 				52CD9A1B2A3B003E00C4727C /* AllChatsScreenViewModel.swift in Sources */,
 				528F7FAF2A4059CD006A3F79 /* ChatScreenModel.swift in Sources */,
 				52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */,
@@ -547,7 +547,7 @@
 				5D44C65E2A3435B100DBE84D /* ConfirmPersonView.swift in Sources */,
 				5DFBA9492A308520002AF39A /* AutorizationViewModel.swift in Sources */,
 				528F7FAD2A4059C2006A3F79 /* ChatScreenView.swift in Sources */,
-				0C1AC9732A49A85000912AAC /* SearchScreenView.swift in Sources */,
+				0C1AC9732A49A85000912AAC /* CreateMeetScreenView.swift in Sources */,
 				5D5CAAB42A03A9C000E14945 /* TinDevApp.swift in Sources */,
 				5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */,
 				5D6173802A3C9AB700D84BF5 /* CategoryView.swift in Sources */,
