@@ -93,12 +93,11 @@ enum Localizable {
         static let discription = "Описание"
         static let discriptionPlaceholder = "Введите описание"
         static let save = "Сохранить"
-    }
     
     enum TabBar {
         static let search = "Поиск"
         static let chat = "Чат"
         static let profile = "Профиль"
-    }
-    
+
+    }   
 }
