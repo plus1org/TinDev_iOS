@@ -22,7 +22,7 @@ struct ChatView: View {
                         presentationMode.wrappedValue.dismiss()
                     }) {
                         HStack {
-                            Image(systemName: "chevron.left")
+                            Image(systemName: Images.arrowBack)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 20)
@@ -33,7 +33,7 @@ struct ChatView: View {
                     Spacer()
                 }
                 Text(chat.personName)
-                    .font(Fonts.regular17)
+                    .font(.headline)
                     .multilineTextAlignment(.center)
             }
             if !chat.isConfirmed {
