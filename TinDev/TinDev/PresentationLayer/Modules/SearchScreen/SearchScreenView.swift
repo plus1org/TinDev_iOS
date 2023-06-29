@@ -7,16 +7,39 @@
 
 import SwiftUI
 
+let sportImage = Image("sport")
+let danceImage = Image("dance")
+let artImage = Image("art")
+let theaterImage = Image("theater")
+let cinemaImage = Image("cinema")
+let anotherImage = Image(systemName: "ellipsis")
+
+let filterForImages = [sportImage,
+                       danceImage,
+                       artImage,
+                       theaterImage,
+                       cinemaImage,
+                       anotherImage]
+
+let filters = [Localizable.SearchScreenModule.sport,
+               Localizable.SearchScreenModule.dance,
+               Localizable.SearchScreenModule.art,
+               Localizable.SearchScreenModule.theater,
+               Localizable.SearchScreenModule.cinema,
+               Localizable.SearchScreenModule.another]
+
 struct SearchScreenView: View {
+    @State private var isCreateMeetScreenPresented = false
+    @State private var isFiltersViewPresented = false
+    @State private var isCategoryViewPresented = false
+    
     @Binding var text: String
     
     var placeholder: String
     var body: some View {
         NavigationView {
             
-            
             VStack {
-            
                 VStack(spacing: 15) {
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -38,9 +61,7 @@ struct SearchScreenView: View {
                     .cornerRadius(8)
                     .padding(.horizontal, 16) //Search Bar
                     
-                    Button {
-                        //
-                    }
+                    Button {self.isFiltersViewPresented = true}
                 label: { HStack {
                     Text(Localizable.SearchScreenModule.filters)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -57,26 +78,61 @@ struct SearchScreenView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
                 .padding(.horizontal, 16)
-                    
-                    Spacer()
-                    
-                } //Filters
-                    
                     Spacer()
                 }
-                
+                .fullScreenCover(isPresented: $isFiltersViewPresented) {
+                    FiltersView()
+                }
+                    //Filters
+                }
                 //MARK: CollectionView:
+                ScrollView {
+                    LazyVGrid (columns: [GridItem(.flexible()),
+                                        GridItem(.flexible()),
+                                        GridItem(.flexible())],
+                              spacing: 10) {
+
+                        ForEach(0..<6) { index in
+                            VStack {
+                                let nameCount = filters[index]
+                                let imageCount = filterForImages[index]
+                                
+                                
+                                Button {}
+                            label: {imageCount
+                                .foregroundColor(Pallete.customBlack)
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(12)
+                                .overlay(RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.black, lineWidth: 1))
+                            }
+                                HStack {
+                                    Text("\(nameCount)")
+                                        .frame(alignment: .leading)
+                                        .font(Fonts.regular15)
+                                    Spacer()
+                                }.padding(.leading, 10)
+                            }
+                        }
+                    }
+                    .padding(10)
+                }
+                
+
+                SolidButton(action: {self.isCreateMeetScreenPresented = true},
+                            title: "Создать",
+                            disabled: false,
+                            font: Fonts.regular16,
+                            frameMaxWidth: .infinity,
+                            foregroundColor: Pallete.customWhite)
+                .fullScreenCover(isPresented: $isCreateMeetScreenPresented) {
+                    CreateMeetScreenView()
+                }
                 
                 
-                
-                
-                
-                
-            }.padding(.top, 5)
+            }
             
-            
-            
-            
+            .padding(.top, 5)
             .navigationBarTitle(Localizable.SearchScreenModule.events, displayMode: .inline).font(Fonts.regular17)
         }
     }
