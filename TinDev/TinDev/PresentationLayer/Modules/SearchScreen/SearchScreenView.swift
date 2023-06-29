@@ -48,7 +48,6 @@ struct SearchScreenView: View {
                         .frame(width: 10, height: 10)
                         .padding(6)
                         .foregroundColor(Pallete.customBlack)
-                    
                 }
             
                 .frame(width: 105, height: 36)
