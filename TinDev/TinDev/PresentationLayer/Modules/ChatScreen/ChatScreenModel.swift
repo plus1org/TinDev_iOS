@@ -13,8 +13,10 @@ struct Message: Identifiable {
     var isUserMessage: Bool
 }
 
-struct Chat {
+struct Chat: Identifiable {
+    let id = UUID()
     var isConfirmed: Bool
+    var isMutted: Bool
     var personImage: String
     var personName: String
     var messageDate: String
