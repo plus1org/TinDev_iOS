@@ -20,6 +20,7 @@ struct ChatView: View {
                 HStack {
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
+                        TabBarModifier.showTabBar()
                     }) {
                         HStack {
                             Image(systemName: Images.arrowBack)
@@ -33,19 +34,19 @@ struct ChatView: View {
                     Spacer()
                 }
                 Text(chat.personName)
-                    .font(.headline)
+                    .font(.system(size: 17, weight: .bold, design: .default))
                     .multilineTextAlignment(.center)
             }
             if !chat.isConfirmed {
                 Text(Localizable.ChatModule.userIsNotConfirmed)
                     .foregroundColor(Pallete.customRed)
-                    .font(Fonts.regular14)
+                    .font(.system(size: 14, weight: .regular, design: .default))
+                    .frame(width: 250)
                     .multilineTextAlignment(.center)
-                    .padding()
             }
             ScrollView {
                 Text("19 июня 2023 г.")
-                    .font(Fonts.regular12)
+                    .font(.system(size: 12, weight: .regular, design: .default))
                     .foregroundColor(Pallete.customDarkGray)
                 ForEach(chat.messages) { message in
                     HStack {
@@ -69,35 +70,44 @@ struct ChatView: View {
                 }
             }
             Divider()
-            HStack {
-                VStack {
-                    TextField(Localizable.ChatModule.message, text: $messageText)
-                        .frame(height: 40)
-                        .padding(.horizontal, 12)
-                        .background(Pallete.customGray)
-                        .cornerRadius(20)
-                }
-                .overlay(
-                    HStack {
-                        Spacer()
-                        Button(action: {}) {
-                            Text(Localizable.ChatModule.sendButton)
-                                .foregroundColor(Pallete.mainColor)
-                        }
-                        .padding(.trailing, 12)
+            ZStack {
+                TextField(Localizable.ChatModule.message, text: $messageText)
+                    .frame(height: 40)
+                    .padding(.horizontal, 12)
+                    .background(Pallete.customGray)
+                    .cornerRadius(20)
+                HStack {
+                    Spacer()
+                    Button(action: {}) {
+                        Text(Localizable.ChatModule.sendButton)
+                            .foregroundColor(Pallete.mainColor)
                     }
-                )
+                    .padding(.trailing, 12)
+                }
             }
+            .keyboardAvoiding()
+            .padding(.bottom, 33)
             .padding(.horizontal, 10)
         }
+        .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.bottom)
         .hideKeyboard()
-        .ignoresSafeArea(.keyboard)
+        .hideTabBar()
+        .gesture(
+            DragGesture(minimumDistance: 45, coordinateSpace: .local)
+                .onEnded { value in
+                    if value.translation.width > 0 {
+                        self.presentationMode.wrappedValue.dismiss()
+                        TabBarModifier.showTabBar()
+                    }
+                }
+        )
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var chat = Chat(
-        isConfirmed: false, personImage: "person",
+        isConfirmed: false, isMutted: true, personImage: "person",
         personName: "Игорь Немцов",
         messageDate: "15 июн",
         messages: [
