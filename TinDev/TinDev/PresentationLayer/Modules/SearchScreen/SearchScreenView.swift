@@ -66,7 +66,6 @@ struct SearchScreenView: View {
     }
 }
 
-
 struct FindScreenView_Previews: PreviewProvider {
     
     @State static var text = ""
