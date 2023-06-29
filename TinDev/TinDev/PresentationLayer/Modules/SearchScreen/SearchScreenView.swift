@@ -13,31 +13,35 @@ struct SearchScreenView: View {
     var placeholder: String
     var body: some View {
         NavigationView {
-            VStack(spacing: 15) {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.gray)
-                    
-                    TextField(placeholder, text: $text)
-                        .padding(.leading, 5)
-                    
-                    Button(action: {
-                        self.text = ""
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
+            
+            
+            VStack {
+            
+                VStack(spacing: 15) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
+                        
+                        TextField(placeholder, text: $text)
+                            .padding(.leading, 5)
+                        
+                        Button(action: {
+                            self.text = ""
+                        }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.gray)
+                        }
+                        .opacity(text.isEmpty ? 0 : 1)
                     }
-                    .opacity(text.isEmpty ? 0 : 1)
-                }
-                .padding(8)
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding(.horizontal, 16) //Search Bar
-
+                    .padding(8)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    .padding(.horizontal, 16) //Search Bar
+                    
                     Button {
                         //
                     }
-            label: { HStack {
+                label: { HStack {
                     Text(Localizable.SearchScreenModule.filters)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(6)
@@ -49,17 +53,30 @@ struct SearchScreenView: View {
                         .padding(6)
                         .foregroundColor(Pallete.customBlack)
                 }
-            
                 .frame(width: 105, height: 36)
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
                 .padding(.horizontal, 16)
+                    
                     Spacer()
-
+                    
                 } //Filters
-
+                    
+                    Spacer()
+                }
                 
-            }
+                //MARK: CollectionView:
+                
+                
+                
+                
+                
+                
+            }.padding(.top, 5)
+            
+            
+            
+            
             .navigationBarTitle(Localizable.SearchScreenModule.events, displayMode: .inline).font(Fonts.regular17)
         }
     }
