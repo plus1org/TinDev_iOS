@@ -8,30 +8,70 @@
 import SwiftUI
 
 struct SearchScreenView: View {
+    @Binding var text: String
+    
+    var placeholder: String
     var body: some View {
-        
-        Button {
-            //
+        NavigationView {
+            VStack(spacing: 15) {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                    
+                    TextField(placeholder, text: $text)
+                        .padding(.leading, 5)
+                    
+                    Button(action: {
+                        self.text = ""
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.gray)
+                    }
+                    .opacity(text.isEmpty ? 0 : 1)
+                }
+                .padding(8)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal, 16) //Search Bar
+
+                    Button {
+                        //
+                    }
+            label: { HStack {
+                    Text(Localizable.SearchScreenModule.filters)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(6)
+                        .foregroundColor(Pallete.customBlack)
+                        .font(Fonts.regular14)
+                    Image(systemName: "line.horizontal.3")
+                        .resizable()
+                        .frame(width: 10, height: 10)
+                        .padding(6)
+                        .foregroundColor(Pallete.customBlack)
+                    
+                }
+            
+                .frame(width: 105, height: 36)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal, 16)
+                    Spacer()
+
+                } //Filters
+
+                
+            }
+            .navigationBarTitle(Localizable.SearchScreenModule.events, displayMode: .inline).font(Fonts.regular17)
         }
-    label: { HStack(spacing: 30) {
-        Text(Localizable.SearchScreenModule.filters)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading)
-            .foregroundColor(Pallete.customBlack)
-            .font(Fonts.regular14)
-        Image(systemName: Images.arrowNext)
-            .padding(.trailing)
-            .foregroundColor(Pallete.customBlack)
-    } .frame(maxWidth: .infinity, maxHeight: 50)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Pallete.customDarkGray, lineWidth: 1))
-    }
     }
 }
 
+
 struct FindScreenView_Previews: PreviewProvider {
+    
+    @State static var text = ""
+    
     static var previews: some View {
-        SearchScreenView()
+        SearchScreenView(text: $text, placeholder: "Поиск")
     }
 }
