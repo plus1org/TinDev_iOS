@@ -1,5 +1,5 @@
 //
-//  FindScreenViewModel.swift
+//  SearchScreenViewModel.swift
 //  TinDev
 //
 //  Created by M on 29.06.2023.
