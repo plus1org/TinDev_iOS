@@ -167,6 +167,13 @@
 			path = CreateMeetScreen;
 			sourceTree = "<group>";
 		};
+		0C513B1E2A4D5A2A0044AFF9 /* FindScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FindScreen;
+			sourceTree = "<group>";
+		};
 		528F7FA92A40593C006A3F79 /* ChatScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +305,7 @@
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0C513B1E2A4D5A2A0044AFF9 /* FindScreen */,
 				0C1AC96F2A49A73900912AAC /* CreateMeetScreen */,
 				528F7FA92A40593C006A3F79 /* ChatScreen */,
 				52CD9A192A3B000800C4727C /* AllChatsScreen */,
