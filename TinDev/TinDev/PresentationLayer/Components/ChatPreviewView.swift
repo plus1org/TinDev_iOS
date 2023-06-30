@@ -19,6 +19,10 @@ struct ChatPreviewView: View {
                     Text(chat.personName)
                         .font(.headline)
                         .foregroundColor(.primary)
+                    if chat.isMutted {
+                        Image(systemName: Images.muteIcon)
+                            .foregroundColor(Pallete.customDarkGray)
+                    }
                     Spacer()
                     Text(chat.messageDate)
                         .font(.footnote)
@@ -48,7 +52,7 @@ struct ChatPreviewView: View {
 
 struct ChatPreviewView_Previews: PreviewProvider {
     static var chat = Chat(
-        isConfirmed: true, personImage: "person",
+        isConfirmed: true, isMutted: true, personImage: "person",
         personName: "Игорь Немцов",
         messageDate: "15 июн",
         messages: [

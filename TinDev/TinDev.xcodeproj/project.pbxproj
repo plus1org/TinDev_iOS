@@ -15,7 +15,7 @@
 		0C25A6F92A4D9A4100E27F9D /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25A6F82A4D9A4100E27F9D /* SearchScreenView.swift */; };
 		0C25A6FB2A4D9A5200E27F9D /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25A6FA2A4D9A5200E27F9D /* SearchScreenViewModel.swift */; };
 		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
-		528F7FA82A405481006A3F79 /* HideKeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */; };
+		528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* KeyboardModifier.swift */; };
 		528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */; };
 		528F7FAD2A4059C2006A3F79 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */; };
 		528F7FAF2A4059CD006A3F79 /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAE2A4059CD006A3F79 /* ChatScreenModel.swift */; };
@@ -60,6 +60,7 @@
 		5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94A2A309148002AF39A /* CircleView.swift */; };
 		5DFBA94D2A30BD01002AF39A /* TextFieldStandart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */; };
 		5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94E2A30E842002AF39A /* Fonts.swift */; };
+		DA3738472A4DA11000AF038C /* HideTabBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3738462A4DA11000AF038C /* HideTabBarModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +89,7 @@
 		0C25A6F82A4D9A4100E27F9D /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		0C25A6FA2A4D9A5200E27F9D /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
 		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardModifier.swift; sourceTree = "<group>"; };
+		528F7FA72A405481006A3F79 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewModel.swift; sourceTree = "<group>"; };
 		528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
 		528F7FAE2A4059CD006A3F79 /* ChatScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenModel.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		5DFBA94A2A309148002AF39A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStandart.swift; sourceTree = "<group>"; };
 		5DFBA94E2A30E842002AF39A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DA3738462A4DA11000AF038C /* HideTabBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideTabBarModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,7 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				5DFBA9402A3084BD002AF39A /* View+Ext.swift */,
-				528F7FA72A405481006A3F79 /* HideKeyboardModifier.swift */,
+				528F7FA72A405481006A3F79 /* KeyboardModifier.swift */,
+				DA3738462A4DA11000AF038C /* HideTabBarModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -545,12 +548,14 @@
 				0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
 				0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */,
+				DA3738472A4DA11000AF038C /* HideTabBarModifier.swift in Sources */,
 				52CD9A1B2A3B003E00C4727C /* AllChatsScreenViewModel.swift in Sources */,
 				528F7FAF2A4059CD006A3F79 /* ChatScreenModel.swift in Sources */,
 				52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */,
 				52D1DA3D2A377B8C001E8AD6 /* PasswordRecoveryScreenView.swift in Sources */,
 				528F7FA82A405481006A3F79 /* HideKeyboardModifier.swift in Sources */,
 				0C25A6FB2A4D9A5200E27F9D /* SearchScreenViewModel.swift in Sources */,
+				528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */,
 				5D6173792A3B191400D84BF5 /* FiltersModel.swift in Sources */,
 				52CD9A1F2A3B005000C4727C /* AllChatsScreenModel.swift in Sources */,
 				52CD9A232A3B0FE800C4727C /* SearchBarView.swift in Sources */,
@@ -667,6 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -721,6 +727,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -739,7 +746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TinDev/Preview Content\"";
-				DEVELOPMENT_TEAM = 7GM9RUFL9F;
+				DEVELOPMENT_TEAM = KG89CXC5J4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -769,7 +776,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TinDev/Preview Content\"";
-				DEVELOPMENT_TEAM = 7GM9RUFL9F;
+				DEVELOPMENT_TEAM = KG89CXC5J4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

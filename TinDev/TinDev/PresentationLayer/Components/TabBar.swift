@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SearchTabView: View {
         
     @State private var isCreateMeetScreenPresented = false
@@ -89,4 +88,3 @@ struct ContentView_Previews: PreviewProvider {
         TabBarView()
     }
 }
-
