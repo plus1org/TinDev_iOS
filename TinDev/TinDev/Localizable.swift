@@ -110,4 +110,18 @@ enum Localizable {
         static let chat = "Чаты"
         static let profile = "Профиль"
     }
+    
+    enum SearchScreenModule {
+        static let navTitle = "Поиск"
+        static let events = "Мероприятия"
+        static let filters = "Фильтры"
+        static let sport = "Спорт"
+        static let dance = "Танцы"
+        static let art = "Искусство"
+        static let theater = "Театр"
+        static let cinema = "Кино"
+        static let another = "Разное"
+        static let create = "Театр"
+    }
+    
 }
