@@ -26,6 +26,7 @@ struct CategoryView: View {
                         //
                     }, title: Localizable.CategoryModule.addButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customBlack)
                 }.padding(.horizontal, 8)
+                .padding(.bottom)
                 
             }.navigationBarTitle(Localizable.CategoryModule.navTitle, displayMode: .inline)
                 .toolbar {

@@ -47,7 +47,7 @@ struct FiltersView: View {
                 SolidButton(action: {
                     //
                 }, title: Localizable.FiltersModule.saveButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
-            }
+            } .padding(.bottom)
             .navigationBarTitle(Localizable.FiltersModule.navTitle, displayMode: .inline)
             .toolbar {
                 ToolbarItemGroup(placement: .cancellationAction) {
