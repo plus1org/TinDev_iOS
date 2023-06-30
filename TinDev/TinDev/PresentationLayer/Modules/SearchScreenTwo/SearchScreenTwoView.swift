@@ -1,41 +1,25 @@
 //
-//  SearchScreenView.swift
+//  SearchScreenTwoView.swift
 //  TinDev
 //
-//  Created by M on 29.06.2023.
+//  Created by M on 30.06.2023.
 //
 
 import SwiftUI
 
-let sportImage = Image("sport")
-let danceImage = Image("dance")
-let artImage = Image("art")
-let theaterImage = Image("theater")
-let cinemaImage = Image("cinema")
-let anotherImage = Image(systemName: "ellipsis")
-let dancejazz = Image("dancejazz")
-let dancevogue = Image("dancevogue")
-let dancehiphop = Image("dancehiphop")
+let filterDiscripton = [Localizable.SearchScreenTwoModule.voguediscription,
+                        Localizable.SearchScreenTwoModule.jazzdiscription,
+                        Localizable.SearchScreenTwoModule.hiphopdiscription]
 
-let filerForDance = [dancevogue,
-                     dancejazz,
-                     dancehiphop]
+let filterDate = [Localizable.SearchScreenTwoModule.voguedate,
+                  Localizable.SearchScreenTwoModule.jazzdate,
+                  Localizable.SearchScreenTwoModule.hiphopdate]
 
-let filterForImages = [sportImage,
-                       danceImage,
-                       artImage,
-                       theaterImage,
-                       cinemaImage,
-                       anotherImage]
+let filterName = [Localizable.SearchScreenTwoModule.vogue,
+                  Localizable.SearchScreenTwoModule.jazz,
+                  Localizable.SearchScreenTwoModule.hiphop]
 
-let filters = [Localizable.SearchScreenModule.sport,
-               Localizable.SearchScreenModule.dance,
-               Localizable.SearchScreenModule.art,
-               Localizable.SearchScreenModule.theater,
-               Localizable.SearchScreenModule.cinema,
-               Localizable.SearchScreenModule.another]
-
-struct SearchScreenView: View {
+struct SearchScreenTwoView: View {
     @State private var isCreateMeetScreenPresented = false
     @State private var isFiltersViewPresented = false
     @State private var isCategoryViewPresented = false
@@ -95,16 +79,15 @@ struct SearchScreenView: View {
                 //MARK: CollectionView:
                 ScrollView {
                     LazyVGrid (columns: [GridItem(.flexible()),
-                                        GridItem(.flexible()),
-                                        GridItem(.flexible())],
-                              spacing: 10) {
-
-                        ForEach(0..<6) { index in
+                                         GridItem(.flexible()),
+                                         GridItem(.flexible())],
+                               spacing: 10) {
+                        
+                        ForEach(0..<3) { index in
+                            let nameCount = filterName[index]
+                            let imageCount = filerForDance[index]
+                            let discriptionCount = filterDiscripton[index]
                             VStack {
-                                let nameCount = filters[index]
-                                let imageCount = filterForImages[index]
-                                
-                                
                                 Button {}
                             label: {imageCount
                                 .foregroundColor(Pallete.customBlack)
@@ -113,18 +96,26 @@ struct SearchScreenView: View {
                                 .overlay(RoundedRectangle(cornerRadius: 12)
                                     .stroke(Color.black, lineWidth: 1))
                             }
-                                HStack {
+                                VStack {
                                     Text("\(nameCount)")
-                                        .frame(alignment: .leading)
-                                        .font(Fonts.regular15)
-                                    Spacer()
-                                }.padding(.leading, 16)
+                                        .lineLimit(2)
+                                        .frame(width: 100, alignment: .leading)
+                                        .font(Fonts.regular14)
+                                    HStack{
+                                        Text("\(discriptionCount)")
+                                            .font(Fonts.regular14)
+                                            .foregroundColor(Pallete.customDarkGray)
+                                            .frame(alignment: .leading)
+                                            .padding(.leading, 13)
+                                        Spacer()
+                                    }
+                                }
+                                Spacer()
                             }
                         }
                     }
-                    .padding(10)
+                               .padding(10)
                 }
-                
 
                 SolidButton(action: {self.isCreateMeetScreenPresented = true},
                             title: "Создать",
@@ -145,11 +136,11 @@ struct SearchScreenView: View {
     }
 }
 
-struct SearchScreenView_Previews: PreviewProvider {
+struct SearchScreenTwoView_Previews: PreviewProvider {
     
     @State static var text = ""
     
     static var previews: some View {
-        SearchScreenView(text: $text, placeholder: Localizable.SearchScreenModule.navTitle)
+        SearchScreenTwoView(text: $text, placeholder: Localizable.SearchScreenModule.navTitle)
     }
 }

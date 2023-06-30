@@ -124,4 +124,16 @@ enum Localizable {
         static let create = "Театр"
     }
     
+    enum SearchScreenTwoModule {
+        static let hiphop = "Hip Hop танцы, мастер класс"
+        static let jazz = "Танцы"
+        static let vogue = "Танцуем вог, бесплатное занятие"
+        static let hiphopdate = "12:30, 1 июл."
+        static let voguedate = "19:00, 20 июн."
+        static let jazzdate = "20:00, 21 июн."
+        static let hiphopdiscription = "Hip-Hop"
+        static let voguediscription = "Vogue"
+        static let jazzdiscription = "Jazz Funk"
+    }
+    
 }
