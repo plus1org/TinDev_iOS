@@ -111,7 +111,7 @@ struct SearchScreenView: View {
                                         .frame(alignment: .leading)
                                         .font(Fonts.regular15)
                                     Spacer()
-                                }.padding(.leading, 14)
+                                }.padding(.leading, 16)
                             }
                         }
                     }
