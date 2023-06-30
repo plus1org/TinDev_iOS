@@ -42,8 +42,7 @@ struct CreateMeetScreenView: View {
                                       text: "",
                                       placeholder: Localizable.CreateMeetModule.meetNamePlaceholder,
                                       textForegroundColor: Pallete.customBlack)
-                    
-                    
+
                     Button { self.isCategoryViewPresented = true } label: {
                         HStack(spacing: 30) {
                             Text(Localizable.FiltersModule.changeCategory)
@@ -54,7 +53,7 @@ struct CreateMeetScreenView: View {
                             Image(systemName: Images.arrowNext)
                                 .padding(.trailing)
                                 .foregroundColor(Pallete.customBlack)
-                        } .frame(maxWidth: .infinity, maxHeight: 50)
+                        } .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Pallete.customDarkGray, lineWidth: 1)
