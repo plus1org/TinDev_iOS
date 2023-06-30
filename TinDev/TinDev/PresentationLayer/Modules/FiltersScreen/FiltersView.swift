@@ -73,7 +73,7 @@ struct FiltersView: View {
                             font: Fonts.regular16,
                             frameMaxWidth: .infinity,
                             foregroundColor: Pallete.customWhite)
-            }
+            } .padding(.bottom)
             .navigationBarTitle(Localizable.FiltersModule.navTitle, displayMode: .inline)
             .toolbar {
                 ToolbarItemGroup(placement: .cancellationAction) {

@@ -32,6 +32,7 @@ struct CategoryView: View {
                                  frameMaxWidth: .infinity,
                                  foregroundColor: Pallete.customBlack)
                 }.padding(.horizontal, 8)
+                .padding(.bottom)
                 
             }.navigationBarTitle(Localizable.CategoryModule.navTitle, displayMode: .inline)
                 .toolbar {
