@@ -19,12 +19,18 @@ struct CategoryView: View {
                 Spacer()
                 
                 HStack {
-                    SolidButton(action: {
-                        //
-                    }, title: Localizable.CategoryModule.applyButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
-                    BorderButton(action: {
-                        //
-                    }, title: Localizable.CategoryModule.addButton, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customBlack)
+                    SolidButton(action: { presentationMode.wrappedValue.dismiss() },
+                                title: Localizable.CategoryModule.applyButton,
+                                disabled: false,
+                                font: Fonts.regular16,
+                                frameMaxWidth: .infinity,
+                                foregroundColor: Pallete.customWhite)
+                    BorderButton(action: { presentationMode.wrappedValue.dismiss() },
+                                 title: Localizable.CategoryModule.addButton,
+                                 disabled: false,
+                                 font: Fonts.regular16,
+                                 frameMaxWidth: .infinity,
+                                 foregroundColor: Pallete.customBlack)
                 }.padding(.horizontal, 8)
                 .padding(.bottom)
                 
@@ -39,9 +45,9 @@ struct CategoryView: View {
                         }
                     }
                 }
-            }
         }
     }
+}
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {

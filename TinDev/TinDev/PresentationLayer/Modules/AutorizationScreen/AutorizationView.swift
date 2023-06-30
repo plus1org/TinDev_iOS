@@ -5,24 +5,34 @@
 import SwiftUI
 
 struct AutorizationView: View {
+    @State private var isRegistrationScreenPresented = false
+    @State private var isLoginScreenPresented = false
+    
     var body: some View {
+        
         VStack(spacing: 14) {
-            SolidButton(action: {},
-                        title: "Регистрация",
+            
+            SolidButton(action: {self.isRegistrationScreenPresented = true},
+                        title: Localizable.AutorizationModule.registration,
                         disabled: false,
                         font: .headline,
                         frameMaxWidth: .infinity,
-                        foregroundColor: Pallete.customGray
-            )
+                        foregroundColor: Pallete.customGray)
+            //MARK: Navigation
+            .fullScreenCover(isPresented: $isRegistrationScreenPresented) {
+                RegistrationView()
+            }
             
-            BorderButton(action: {},
-                         title: "Вход",
+            BorderButton(action: {self.isLoginScreenPresented = true},
+                         title: Localizable.AutorizationModule.entrance,
                          disabled: false,
                          font: .headline,
                          frameMaxWidth: .infinity,
                          foregroundColor: Pallete.customBlack)
-//            .overlay(RoundedRectangle(cornerRadius: 15)
-//                .stroke(Pallete.customBlack, lineWidth: 1))
+            //MARK: Navigation
+            .fullScreenCover(isPresented: $isLoginScreenPresented) {
+                LoginScreenView()
+            }
         }
     }
 }

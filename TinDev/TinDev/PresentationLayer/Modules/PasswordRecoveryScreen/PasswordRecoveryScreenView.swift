@@ -6,6 +6,8 @@ import SwiftUI
 
 struct PasswordRecoveryScreenView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var phoneNumber = ""
     
     var body: some View {
@@ -32,8 +34,13 @@ struct PasswordRecoveryScreenView: View {
                 }.padding()
                 Spacer()
                 VStack(spacing: 14) {
-                    SolidButton(action: {
-                    }, title: Localizable.PasswordRecoveryModule.passwordRecovery, disabled: false, font: Fonts.regular16, frameMaxWidth: .infinity, foregroundColor: Pallete.customWhite)
+                    SolidButton(action: { presentationMode.wrappedValue.dismiss() },
+                                title: Localizable.PasswordRecoveryModule.passwordRecovery,
+                                disabled: false,
+                                font: Fonts.regular16,
+                                frameMaxWidth: .infinity,
+                                foregroundColor: Pallete.customWhite)
+                    
                 }.padding(.bottom)
             }
         }

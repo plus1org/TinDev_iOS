@@ -11,21 +11,19 @@ struct SearchBarView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
+            Image(systemName: Images.magnifyingGlass)
                 .foregroundColor(.gray)
-
+                .padding(.leading, 8)
             TextField(placeholder, text: $text)
-                .padding(.leading, 5)
-            
             Button(action: {
                 self.text = ""
             }) {
-                Image(systemName: "xmark.circle.fill")
+                Image(systemName: Images.closeButton)
                     .foregroundColor(.gray)
             }
             .opacity(text.isEmpty ? 0 : 1)
         }
-        .padding(8)
+        .frame(height: 36)
         .background(Color(.systemGray6))
         .cornerRadius(8)
         .padding(.horizontal, 16)

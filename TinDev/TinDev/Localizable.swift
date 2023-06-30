@@ -20,7 +20,6 @@ enum Localizable {
         static let confirmPassword = "Подтверждение пароля"
         static let confirmPasswordPlaceholder = "Подтвердите пароль"
         static let regButton = "Зарегистрироваться"
-        
     }
     
     enum LoginModule {
@@ -39,8 +38,11 @@ enum Localizable {
         static let passwordRecovery = "Восстановить пароль"
         static let smsMessage = "На ваш номер отправлено СМС с инструкциями по восстановлению пароля"
     }
-
-    enum AutorizationModule { }
+    
+    enum AutorizationModule {
+        static let registration = "Регистрация"
+        static let entrance = "Вход"
+    }
     
     enum ConfirmPersonModule {
         static let skipConfirm = "Подтвердить позже"
@@ -70,4 +72,56 @@ enum Localizable {
         static let addButton = "Добавить"
         static let navTitle = "Категории"
     }
+    
+    enum CreateMeetModule {
+        static let navTitle = "Создание мероприятия"
+        static let addPhotos = "Добавьте фотографии"
+        static let meetName = "Название"
+        static let meetNamePlaceholder = "Введите название"
+        static let choiceCategory = "Выберите категорию"
+        static let date = "Дата"
+        static let datePlaceholder = "Введите дату"
+        static let time = "Время"
+        static let timePlaceholder = "Введите время"
+        static let city = "Город"
+        static let cityPlaceholder = "Введите город"
+        static let metro = "Метро"
+        static let metroPlaceholder = "Введите метро"
+        static let area = "Район"
+        static let areaPlaceholder = "Введите район"
+        static let discription = "Описание"
+        static let discriptionPlaceholder = "Введите описание"
+        static let save = "Сохранить"
+    }
+    
+    enum AllChatsModule {
+        static let search = "Поиск по чатам"
+        static let chats = "Чаты"
+    }
+    
+    enum ChatModule {
+        static let userIsNotConfirmed = "Пользователь не подтвержден, может быть мошенником"
+        static let message = "Сообщение"
+        static let sendButton = "Отправить"
+    }
+    
+    enum TabBar {
+        static let search = "Поиск"
+        static let chat = "Чаты"
+        static let profile = "Профиль"
+    }
+    
+    enum SearchScreenModule {
+        static let navTitle = "Поиск"
+        static let events = "Мероприятия"
+        static let filters = "Фильтры"
+        static let sport = "Спорт"
+        static let dance = "Танцы"
+        static let art = "Искусство"
+        static let theater = "Театр"
+        static let cinema = "Кино"
+        static let another = "Разное"
+        static let create = "Театр"
+    }
+    
 }
