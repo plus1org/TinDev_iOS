@@ -7,38 +7,6 @@
 
 import SwiftUI
 
-struct SearchTabView: View {
-        
-    @State private var isCreateMeetScreenPresented = false
-    @State private var isFiltersViewPresented = false
-    @State private var isCategoryViewPresented = false
-    
-    var body: some View {
-        VStack(spacing: 20) {
-            Button(action: {self.isCreateMeetScreenPresented = true}) {
-                Text(Localizable.CreateMeetModule.navTitle).font(Fonts.regular17)
-            }
-            .fullScreenCover(isPresented: $isCreateMeetScreenPresented) {
-                CreateMeetScreenView()
-            }
-            
-            Button(action: {self.isFiltersViewPresented = true}) {
-                Text(Localizable.FiltersModule.navTitle).font(Fonts.regular17)
-            }
-            .fullScreenCover(isPresented: $isFiltersViewPresented) {
-                FiltersView()
-            }
-            
-            Button(action: {self.isCategoryViewPresented = true}) {
-                Text(Localizable.CategoryModule.navTitle).font(Fonts.regular17)
-            }
-            .fullScreenCover(isPresented: $isCategoryViewPresented) {
-                CategoryView()
-            }
-        }
-    }
-}
-
 struct ChatTabView: View {
     var body: some View {
         AllChatsScreenView()
@@ -61,7 +29,7 @@ struct ProfileTabView: View {
 struct TabBarView: View {
     var body: some View {
         TabView {
-            SearchTabView()
+            SearchScreenView(text: .constant(""), placeholder: Localizable.SearchScreenModule.navTitle)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text(Localizable.TabBar.search)

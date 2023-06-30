@@ -143,6 +143,6 @@ struct FindScreenView_Previews: PreviewProvider {
     @State static var text = ""
     
     static var previews: some View {
-        SearchScreenView(text: $text, placeholder: "Поиск")
+        SearchScreenView(text: $text, placeholder: Localizable.SearchScreenModule.navTitle)
     }
 }
