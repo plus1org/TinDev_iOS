@@ -109,7 +109,7 @@ struct SearchScreenTwoView: View {
                                             .font(Fonts.regular14)
                                             .foregroundColor(Pallete.customDarkGray)
                                             .frame(alignment: .leading)
-                                            .padding(.leading, 13)
+                                            .padding(.leading, 7)
                                         Spacer()
                                     }
                                     HStack{
@@ -117,7 +117,7 @@ struct SearchScreenTwoView: View {
                                             .font(Fonts.regular14)
                                             .foregroundColor(Pallete.customDarkGray)
                                             .frame(alignment: .leading)
-                                            .padding(.leading, 13)
+                                            .padding(.leading, 7)
                                         Spacer()
                                     }
                                 }
