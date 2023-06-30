@@ -87,8 +87,11 @@ struct SearchScreenTwoView: View {
                             let nameCount = filterName[index]
                             let imageCount = filerForDance[index]
                             let discriptionCount = filterDiscripton[index]
+                            let dateCount = filterDate[index]
                             VStack {
-                                Button {}
+                                Button {
+                                    ///
+                                }
                             label: {imageCount
                                 .foregroundColor(Pallete.customBlack)
                                 .frame(width: 100, height: 100)
@@ -103,6 +106,14 @@ struct SearchScreenTwoView: View {
                                         .font(Fonts.regular14)
                                     HStack{
                                         Text("\(discriptionCount)")
+                                            .font(Fonts.regular14)
+                                            .foregroundColor(Pallete.customDarkGray)
+                                            .frame(alignment: .leading)
+                                            .padding(.leading, 13)
+                                        Spacer()
+                                    }
+                                    HStack{
+                                        Text("\(dateCount)")
                                             .font(Fonts.regular14)
                                             .foregroundColor(Pallete.customDarkGray)
                                             .frame(alignment: .leading)
