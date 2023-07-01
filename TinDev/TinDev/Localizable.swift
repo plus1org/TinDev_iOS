@@ -112,7 +112,7 @@ enum Localizable {
     }
     
     enum SearchScreenModule {
-        static let navTitle = "Поиск"
+        static let search = "Поиск"
         static let events = "Мероприятия"
         static let filters = "Фильтры"
         static let sport = "Спорт"

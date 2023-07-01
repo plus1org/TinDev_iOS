@@ -7,14 +7,7 @@
 
 import SwiftUI
 
-struct ChatTabView: View {
-    var body: some View {
-        AllChatsScreenView()
-    }
-}
-
 struct ProfileTabView: View {
-    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -29,23 +22,20 @@ struct ProfileTabView: View {
 struct TabBarView: View {
     var body: some View {
         TabView {
-            SearchScreenView(text: .constant(""), placeholder: Localizable.SearchScreenModule.navTitle)
+            SearchScreenView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text(Localizable.TabBar.search)
                 }
-            
-            ChatTabView()
+            AllChatsScreenView()
                 .tabItem {
                     Image(systemName: "message")
                     Text(Localizable.TabBar.chat)
                 }
-            
             ProfileTabView()
                 .tabItem {
                     Image(systemName: "person")
                     Text(Localizable.TabBar.profile)
-                    
                 }
         }.accentColor(Pallete.mainColor)
     }

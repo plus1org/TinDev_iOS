@@ -16,33 +16,13 @@ struct ChatView: View {
     
     var body: some View {
         VStack {
-            ZStack {
-                HStack {
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                        TabBarModifier.showTabBar()
-                    }) {
-                        HStack {
-                            Image(systemName: Images.arrowBack)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: 20)
-                        }
-                        .foregroundColor(Pallete.customBlack)
-                    }
-                    .padding()
-                    Spacer()
-                }
-                Text(chat.personName)
-                    .font(.system(size: 17, weight: .bold, design: .default))
-                    .multilineTextAlignment(.center)
-            }
             if !chat.isConfirmed {
                 Text(Localizable.ChatModule.userIsNotConfirmed)
                     .foregroundColor(Pallete.customRed)
-                    .font(.system(size: 14, weight: .regular, design: .default))
+                    .font(Fonts.regular14)
                     .frame(width: 250)
                     .multilineTextAlignment(.center)
+                    .padding()
             }
             ScrollView {
                 Text("19 июня 2023 г.")
@@ -85,23 +65,11 @@ struct ChatView: View {
                     .padding(.trailing, 12)
                 }
             }
-            .keyboardAvoiding()
-            .padding(.bottom, 33)
             .padding(.horizontal, 10)
+            .padding(.bottom, 10)
         }
-        .navigationBarBackButtonHidden(true)
-        .edgesIgnoringSafeArea(.bottom)
+        .navigationTitle(chat.personName)
         .hideKeyboard()
-        .hideTabBar()
-        .gesture(
-            DragGesture(minimumDistance: 45, coordinateSpace: .local)
-                .onEnded { value in
-                    if value.translation.width > 0 {
-                        self.presentationMode.wrappedValue.dismiss()
-                        TabBarModifier.showTabBar()
-                    }
-                }
-        )
     }
 }
 
