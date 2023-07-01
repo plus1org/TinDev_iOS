@@ -74,18 +74,7 @@ struct ChatView: View {
 }
 
 struct ChatView_Previews: PreviewProvider {
-    static var chat = Chat(
-        isConfirmed: false, isMutted: true, personImage: "person",
-        personName: "Игорь Немцов",
-        messageDate: "15 июн",
-        messages: [
-            Message(text: "Привет, как дела?", isUserMessage: false),
-            Message(text: "Привет, все отлично!", isUserMessage: true),
-            Message(text: "Договорились, тогда я буду рассчитывать на тебя", isUserMessage: false)
-        ]
-    )
-    
     static var previews: some View {
-        ChatView(chat: chat)
+        ChatView(chat: MockChatData.chats[0])
     }
 }

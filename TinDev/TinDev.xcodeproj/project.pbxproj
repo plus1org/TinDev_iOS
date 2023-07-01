@@ -60,6 +60,7 @@
 		5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94A2A309148002AF39A /* CircleView.swift */; };
 		5DFBA94D2A30BD01002AF39A /* TextFieldStandart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */; };
 		5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94E2A30E842002AF39A /* Fonts.swift */; };
+		DAC066092A503BA800DDAAE5 /* MockChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC066082A503BA800DDAAE5 /* MockChatData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		5DFBA94A2A309148002AF39A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStandart.swift; sourceTree = "<group>"; };
 		5DFBA94E2A30E842002AF39A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DAC066082A503BA800DDAAE5 /* MockChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 		5DF0DA7C2A307296000F3EFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DAC066072A503B9C00DDAAE5 /* Mock */,
 				5D5CAAB72A03A9C100E14945 /* assets.xcassets */,
 				5DFBA9372A307729002AF39A /* Pallete.swift */,
 				5DFBA94E2A30E842002AF39A /* Fonts.swift */,
@@ -401,6 +404,14 @@
 				0C1AC9952A4C06CF00912AAC /* TabBar.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DAC066072A503B9C00DDAAE5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DAC066082A503BA800DDAAE5 /* MockChatData.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +555,7 @@
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
 				0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
+				DAC066092A503BA800DDAAE5 /* MockChatData.swift in Sources */,
 				0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */,
 				52CD9A1B2A3B003E00C4727C /* AllChatsScreenViewModel.swift in Sources */,
 				528F7FAF2A4059CD006A3F79 /* ChatScreenModel.swift in Sources */,
