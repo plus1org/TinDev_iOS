@@ -40,34 +40,13 @@ struct SearchScreenView: View {
     @State private var isFiltersViewPresented = false
     @State private var isCategoryViewPresented = false
     
-    @Binding var text: String
+    @State private var searchText = ""
     
-    var placeholder: String
     var body: some View {
         NavigationView {
-            
             VStack {
-                VStack(spacing: 15) {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
-                        
-                        TextField(placeholder, text: $text)
-                            .padding(.leading, 5)
-                        
-                        Button(action: {
-                            self.text = ""
-                        }) {
-                            Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(.gray)
-                        }
-                        .opacity(text.isEmpty ? 0 : 1)
-                    }
-                    .padding(8)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.horizontal, 16) //Search Bar
-                    
+                VStack() {
+                    SearchBarView(text: $searchText, placeholder: Localizable.SearchScreenModule.search)
                     Button {self.isFiltersViewPresented = true}
                 label: { HStack {
                     Text(Localizable.SearchScreenModule.filters)
@@ -84,6 +63,7 @@ struct SearchScreenView: View {
                 .frame(width: 105, height: 36)
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
+                .padding(.top, 20)
                 .padding(.horizontal, 16)
                     Spacer()
                 }
@@ -95,10 +75,10 @@ struct SearchScreenView: View {
                 //MARK: CollectionView:
                 ScrollView {
                     LazyVGrid (columns: [GridItem(.flexible()),
-                                        GridItem(.flexible()),
-                                        GridItem(.flexible())],
-                              spacing: 10) {
-
+                                         GridItem(.flexible()),
+                                         GridItem(.flexible())],
+                               spacing: 10) {
+                        
                         ForEach(0..<6) { index in
                             VStack {
                                 let nameCount = filters[index]
@@ -122,34 +102,26 @@ struct SearchScreenView: View {
                             }
                         }
                     }
-                    .padding(10)
+                               .padding(10)
                 }
-                
-
                 SolidButton(action: {self.isCreateMeetScreenPresented = true},
                             title: "Создать",
                             disabled: false,
                             font: Fonts.regular16,
                             frameMaxWidth: .infinity,
                             foregroundColor: Pallete.customWhite)
-                .fullScreenCover(isPresented: $isCreateMeetScreenPresented) {
-                    CreateMeetScreenView()
-                }
-                
-                
+                Divider()
+                    .fullScreenCover(isPresented: $isCreateMeetScreenPresented) {
+                        CreateMeetScreenView()
+                    }
             }
-            
-            .padding(.top, 5)
-            .navigationBarTitle(Localizable.SearchScreenModule.events, displayMode: .inline).font(Fonts.regular17)
+            .navigationBarTitle(Localizable.SearchScreenModule.events, displayMode: .inline)
         }
     }
 }
 
 struct SearchScreenView_Previews: PreviewProvider {
-    
-    @State static var text = ""
-    
     static var previews: some View {
-        SearchScreenView(text: $text, placeholder: Localizable.SearchScreenModule.navTitle)
+        SearchScreenView()
     }
 }

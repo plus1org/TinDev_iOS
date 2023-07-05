@@ -48,6 +48,7 @@ struct SolidButton: View {
         }
         .disabled(disabled)
         .padding(.horizontal)
+        .padding(.bottom, 16)
     }
 }
 
@@ -72,6 +73,7 @@ struct BorderButton: View {
         }
         .disabled(disabled)
         .padding(.horizontal)
+        .padding(.bottom, 16)
     }
 }
 
