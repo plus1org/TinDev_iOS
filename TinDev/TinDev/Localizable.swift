@@ -23,9 +23,10 @@ enum Localizable {
         static let confirmPasswordPlaceholder = "Подтвердите пароль"
         static let regButton = "Зарегистрироваться"
         static let standart = "Cтандартный"
-        static let business = "Бизнес аккаунт"
+        static let business = "Бизнес-аккаунт"
         static let choise = "Выберите тип \n аккаунта"
         static let next = "Далее"
+        static let back = "Назад"
     }
     
     enum LoginModule {
