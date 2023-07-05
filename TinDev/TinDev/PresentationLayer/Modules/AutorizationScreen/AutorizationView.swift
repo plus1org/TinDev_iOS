@@ -20,7 +20,7 @@ struct AutorizationView: View {
                         foregroundColor: Pallete.customGray)
             //MARK: Navigation
             .fullScreenCover(isPresented: $isRegistrationScreenPresented) {
-                RegistrationView()
+                RegistrationPersonView()
             }
             
             BorderButton(action: {self.isLoginScreenPresented = true},

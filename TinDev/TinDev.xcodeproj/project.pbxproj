@@ -48,9 +48,9 @@
 		5D6173802A3C9AB700D84BF5 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61737F2A3C9AB700D84BF5 /* CategoryView.swift */; };
 		5D6173822A3C9AC800D84BF5 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173812A3C9AC800D84BF5 /* CategoryViewModel.swift */; };
 		5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */; };
-		5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */; };
-		5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9322A307615002AF39A /* RegistrationView.swift */; };
-		5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */; };
+		5DFBA9312A3075F8002AF39A /* RegistrationPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9302A3075F8002AF39A /* RegistrationPersonModel.swift */; };
+		5DFBA9332A307615002AF39A /* RegistrationPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9322A307615002AF39A /* RegistrationPersonView.swift */; };
+		5DFBA9352A30762A002AF39A /* RegistrationPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9342A30762A002AF39A /* RegistrationPersonViewModel.swift */; };
 		5DFBA9382A307729002AF39A /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9372A307729002AF39A /* Pallete.swift */; };
 		5DFBA93A2A30773D002AF39A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA9392A30773D002AF39A /* Images.swift */; };
 		5DFBA93C2A307748002AF39A /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA93B2A307747002AF39A /* Localizable.swift */; };
@@ -128,9 +128,9 @@
 		5D61737F2A3C9AB700D84BF5 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		5D6173812A3C9AC800D84BF5 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
-		5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
-		5DFBA9322A307615002AF39A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
-		5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		5DFBA9302A3075F8002AF39A /* RegistrationPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPersonModel.swift; sourceTree = "<group>"; };
+		5DFBA9322A307615002AF39A /* RegistrationPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPersonView.swift; sourceTree = "<group>"; };
+		5DFBA9342A30762A002AF39A /* RegistrationPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPersonViewModel.swift; sourceTree = "<group>"; };
 		5DFBA9372A307729002AF39A /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		5DFBA9392A30773D002AF39A /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		5DFBA93B2A307747002AF39A /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -329,6 +329,16 @@
 			path = CategoryScreen;
 			sourceTree = "<group>";
 		};
+		5D69260B2A55832A00D1F003 /* RegistrationPerson */ = {
+			isa = PBXGroup;
+			children = (
+				5DFBA9302A3075F8002AF39A /* RegistrationPersonModel.swift */,
+				5DFBA9322A307615002AF39A /* RegistrationPersonView.swift */,
+				5DFBA9342A30762A002AF39A /* RegistrationPersonViewModel.swift */,
+			);
+			path = RegistrationPerson;
+			sourceTree = "<group>";
+		};
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,9 +412,7 @@
 		5DFBA9362A307632002AF39A /* RegistrationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				5DFBA9302A3075F8002AF39A /* RegistrationModel.swift */,
-				5DFBA9322A307615002AF39A /* RegistrationView.swift */,
-				5DFBA9342A30762A002AF39A /* RegistrationViewModel.swift */,
+				5D69260B2A55832A00D1F003 /* RegistrationPerson */,
 			);
 			path = RegistrationScreen;
 			sourceTree = "<group>";
@@ -568,7 +576,7 @@
 				0C1AC9752A49A86900912AAC /* CreateMeetScreenViewModel.swift in Sources */,
 				0C8A7FEE2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift in Sources */,
 				5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */,
-				5DFBA9332A307615002AF39A /* RegistrationView.swift in Sources */,
+				5DFBA9332A307615002AF39A /* RegistrationPersonView.swift in Sources */,
 				0C7D91542A4EFB9E0090F32B /* SearchScreenTwoModel.swift in Sources */,
 				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
@@ -595,8 +603,8 @@
 				52CD9A252A3B10DA00C4727C /* ChatPreviewView.swift in Sources */,
 				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
 				5DFBA93A2A30773D002AF39A /* Images.swift in Sources */,
-				5DFBA9352A30762A002AF39A /* RegistrationViewModel.swift in Sources */,
-				5DFBA9312A3075F8002AF39A /* RegistrationModel.swift in Sources */,
+				5DFBA9352A30762A002AF39A /* RegistrationPersonViewModel.swift in Sources */,
+				5DFBA9312A3075F8002AF39A /* RegistrationPersonModel.swift in Sources */,
 				5D61737D2A3C9A9100D84BF5 /* CategoryModel.swift in Sources */,
 				52D1DA3B2A377B84001E8AD6 /* PasswordRecoveryScreenViewModel.swift in Sources */,
 				5DFBA9382A307729002AF39A /* Pallete.swift in Sources */,

@@ -15,6 +15,8 @@ enum Localizable {
         static let secondNamePlaceholder = "Ваша фамилия"
         static let date = "Дата"
         static let datePlaceholder = "Выберите дату"
+        static let email = "Электронная почта"
+        static let emailPlaceholder = "Введите email"
         static let password = "Пароль"
         static let passwordPlaceholder = "Введите пароль"
         static let confirmPassword = "Подтверждение пароля"

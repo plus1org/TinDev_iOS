@@ -12,4 +12,5 @@ struct Images {
     static let magnifyingGlass = "magnifyingglass"
     static let closeButton = "xmark.circle.fill"
     static let muteIcon = "speaker.slash.fill"
+    static let person = "person.fill"
 }

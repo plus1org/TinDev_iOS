@@ -152,6 +152,6 @@ struct SearchScreenTwoView_Previews: PreviewProvider {
     @State static var text = ""
     
     static var previews: some View {
-        SearchScreenTwoView(text: $text, placeholder: Localizable.SearchScreenModule.navTitle)
+        SearchScreenTwoView(text: $text, placeholder: Localizable.SearchScreenModule.search)
     }
 }

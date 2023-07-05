@@ -11,5 +11,6 @@ struct Pallete {
     static let customRed = Color("customRed")
     static let customBlack = Color("customBlack")
     static let customWhite = Color("customWhite")
+    static let customBlue = Color("customBlue")
     
 }

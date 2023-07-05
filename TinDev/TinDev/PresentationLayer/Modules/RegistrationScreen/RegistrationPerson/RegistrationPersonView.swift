@@ -4,46 +4,50 @@
 
 import SwiftUI
 
-struct RegistrationView: View {
+struct RegistrationPersonView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
     @State private var isShowingFullScreen = false
     @State private var isLoginScreenPresented = false
     
-    let photos = [CircleView(imageName: "swiftlogo", figureType: .circle),
-                  CircleView(imageName: nil, figureType: .circle),
-                  CircleView(imageName: nil, figureType: .circle),
-                  CircleView(imageName: nil, figureType: .circle)]
-    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                 VStack(spacing: 25) {
                     VStack {
-                        Text(Localizable.RegestrationModule.photo)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(Fonts.regular15)
-                            .padding(.leading)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(photos, id: \.self) { photo in
-                                    photo.frame(width: 100, height: 105)
-                                }
+                        ZStack(alignment: .bottomTrailing) {
+                            ZStack {
+                                Circle().foregroundColor(Pallete.customGray)
+                                Image(systemName: Images.camera)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .scaleEffect(3)
+                                    .foregroundColor(Pallete.customDarkGray)
                             }
-                        }.padding(.leading)
-                        
+                            .frame(width: 120, height: 120)
+                            
+                            Button {
+                                //
+                            } label: {
+                                Image(systemName: Images.plus)
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.white)
+                                    .background(Pallete.mainColor)
+                                    .clipShape(Circle())
+                            }.padding(.leading)
+                        }
+
                         Button {
                             self.isShowingFullScreen = true
                         } label: {
+                            Image(systemName: Images.person)
                             Text(Localizable.RegestrationModule.confirmID)
+                                .foregroundColor(Pallete.customBlue)
                                 .font(Fonts.regular14)
-                        }.frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
+                        }.frame(maxWidth: .infinity, alignment: .center)
                             .fullScreenCover(isPresented: $isShowingFullScreen) {
                                 ConfirmPersonView()
-                            }
+                            }.padding(.top)
                     }
                     
                     VStack(spacing: 15) {
@@ -62,6 +66,10 @@ struct RegistrationView: View {
                                           text: "",
                                           placeholder: Localizable.RegestrationModule.datePlaceholder,
                                           textForegroundColor: Pallete.customBlack)
+                        TextFieldStandart(headerText: Localizable.RegestrationModule.email,
+                                                                  text: "",
+                                                                  placeholder: Localizable.RegestrationModule.emailPlaceholder,
+                                                                  textForegroundColor: Pallete.customBlack)
                         TextFieldStandart(headerText: Localizable.RegestrationModule.password,
                                           text: "",
                                           placeholder: Localizable.RegestrationModule.passwordPlaceholder,
@@ -103,6 +111,6 @@ struct RegistrationView: View {
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+        RegistrationPersonView()
     }
 }

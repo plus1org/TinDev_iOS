@@ -1,0 +1,5 @@
+//
+//  RegistrationPersonViewModel.swift
+//
+
+import Foundation
