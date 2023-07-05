@@ -18,6 +18,7 @@
 		0C7D91542A4EFB9E0090F32B /* SearchScreenTwoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D91532A4EFB9E0090F32B /* SearchScreenTwoModel.swift */; };
 		0C7D91582A4EFC170090F32B /* SearchScreenTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */; };
 		0C8A7FEE2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */; };
+		0CA5872E2A55EADB00CD2263 /* SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5872D2A55EADB00CD2263 /* SegmentedPicker.swift */; };
 		528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* KeyboardModifier.swift */; };
 		528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */; };
 		528F7FAD2A4059C2006A3F79 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */; };
@@ -95,6 +96,7 @@
 		0C7D91532A4EFB9E0090F32B /* SearchScreenTwoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoModel.swift; sourceTree = "<group>"; };
 		0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoView.swift; sourceTree = "<group>"; };
 		0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoViewModel.swift; sourceTree = "<group>"; };
+		0CA5872D2A55EADB00CD2263 /* SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPicker.swift; sourceTree = "<group>"; };
 		528F7FA72A405481006A3F79 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewModel.swift; sourceTree = "<group>"; };
 		528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				52CD9A242A3B10DA00C4727C /* ChatPreviewView.swift */,
 				5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */,
 				0C1AC9952A4C06CF00912AAC /* TabBar.swift */,
+				0CA5872D2A55EADB00CD2263 /* SegmentedPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				0C25A6F92A4D9A4100E27F9D /* SearchScreenView.swift in Sources */,
 				0C7D91582A4EFC170090F32B /* SearchScreenTwoView.swift in Sources */,
 				0C25A6F72A4D9A2D00E27F9D /* SearchScreenModel.swift in Sources */,
+				0CA5872E2A55EADB00CD2263 /* SegmentedPicker.swift in Sources */,
 				5D6173822A3C9AC800D84BF5 /* CategoryViewModel.swift in Sources */,
 				52CD9A252A3B10DA00C4727C /* ChatPreviewView.swift in Sources */,
 				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
@@ -783,7 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TinDev/Preview Content\"";
-				DEVELOPMENT_TEAM = KG89CXC5J4;
+				DEVELOPMENT_TEAM = CS2G47Y936;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -798,7 +802,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.TinDev";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TinDev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -816,7 +820,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TinDev/Preview Content\"";
-				DEVELOPMENT_TEAM = KG89CXC5J4;
+				DEVELOPMENT_TEAM = CS2G47Y936;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -831,7 +835,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.TinDev";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TinDev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
