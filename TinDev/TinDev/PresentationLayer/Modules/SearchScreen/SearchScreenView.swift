@@ -13,6 +13,13 @@ let artImage = Image("art")
 let theaterImage = Image("theater")
 let cinemaImage = Image("cinema")
 let anotherImage = Image(systemName: "ellipsis")
+let dancejazz = Image("dancejazz")
+let dancevogue = Image("dancevogue")
+let dancehiphop = Image("dancehiphop")
+
+let filerForDance = [dancevogue,
+                     dancejazz,
+                     dancehiphop]
 
 let filterForImages = [sportImage,
                        danceImage,
@@ -113,7 +120,7 @@ struct SearchScreenView: View {
     }
 }
 
-struct FindScreenView_Previews: PreviewProvider {
+struct SearchScreenView_Previews: PreviewProvider {
     static var previews: some View {
         SearchScreenView()
     }
