@@ -1,5 +1,0 @@
-//
-//  RegistrationViewModel.swift
-//
-
-import Foundation

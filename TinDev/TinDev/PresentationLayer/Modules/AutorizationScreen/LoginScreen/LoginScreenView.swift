@@ -49,7 +49,7 @@ struct LoginScreenView: View {
                                  frameMaxWidth: .infinity,
                                  foregroundColor: Pallete.customBlack)
                     .fullScreenCover(isPresented: $isRegistrationScreenPresented) {
-                        RegistrationView()
+                        RegistrationPersonView()
                     }
                     
                     SolidButton(action: {self.isTabBarPresented = true},

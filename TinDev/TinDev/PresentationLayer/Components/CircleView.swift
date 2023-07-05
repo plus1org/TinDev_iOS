@@ -28,6 +28,7 @@ struct CircleView: View, Hashable {
                             .frame(width: 50, height: 50)
                     } else {
                         Image(systemName: Images.camera)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .scaleEffect(5)
                             .foregroundColor(Pallete.customDarkGray)
                     }
