@@ -15,6 +15,9 @@
 		0C25A6F92A4D9A4100E27F9D /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25A6F82A4D9A4100E27F9D /* SearchScreenView.swift */; };
 		0C25A6FB2A4D9A5200E27F9D /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25A6FA2A4D9A5200E27F9D /* SearchScreenViewModel.swift */; };
 		0C7BCAAD2A3882A000920B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */; };
+		0C7D91542A4EFB9E0090F32B /* SearchScreenTwoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D91532A4EFB9E0090F32B /* SearchScreenTwoModel.swift */; };
+		0C7D91582A4EFC170090F32B /* SearchScreenTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */; };
+		0C8A7FEE2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */; };
 		528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* KeyboardModifier.swift */; };
 		528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */; };
 		528F7FAD2A4059C2006A3F79 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */; };
@@ -60,7 +63,7 @@
 		5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94A2A309148002AF39A /* CircleView.swift */; };
 		5DFBA94D2A30BD01002AF39A /* TextFieldStandart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */; };
 		5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94E2A30E842002AF39A /* Fonts.swift */; };
-		DA3738472A4DA11000AF038C /* HideTabBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3738462A4DA11000AF038C /* HideTabBarModifier.swift */; };
+		DAC066092A503BA800DDAAE5 /* MockChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC066082A503BA800DDAAE5 /* MockChatData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		0C25A6F82A4D9A4100E27F9D /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		0C25A6FA2A4D9A5200E27F9D /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
 		0C7BCAAC2A3882A000920B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C7D91532A4EFB9E0090F32B /* SearchScreenTwoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoModel.swift; sourceTree = "<group>"; };
+		0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoView.swift; sourceTree = "<group>"; };
+		0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoViewModel.swift; sourceTree = "<group>"; };
 		528F7FA72A405481006A3F79 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewModel.swift; sourceTree = "<group>"; };
 		528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
@@ -137,7 +143,7 @@
 		5DFBA94A2A309148002AF39A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStandart.swift; sourceTree = "<group>"; };
 		5DFBA94E2A30E842002AF39A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		DA3738462A4DA11000AF038C /* HideTabBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideTabBarModifier.swift; sourceTree = "<group>"; };
+		DAC066082A503BA800DDAAE5 /* MockChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,16 @@
 				0C25A6FA2A4D9A5200E27F9D /* SearchScreenViewModel.swift */,
 			);
 			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		0C7D91522A4EFB320090F32B /* SearchScreenTwo */ = {
+			isa = PBXGroup;
+			children = (
+				0C7D91532A4EFB9E0090F32B /* SearchScreenTwoModel.swift */,
+				0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */,
+				0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */,
+			);
+			path = SearchScreenTwo;
 			sourceTree = "<group>";
 		};
 		528F7FA92A40593C006A3F79 /* ChatScreen */ = {
@@ -326,6 +342,7 @@
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0C7D91522A4EFB320090F32B /* SearchScreenTwo */,
 				0C513B1E2A4D5A2A0044AFF9 /* SearchScreen */,
 				0C1AC96F2A49A73900912AAC /* CreateMeetScreen */,
 				528F7FA92A40593C006A3F79 /* ChatScreen */,
@@ -354,6 +371,7 @@
 		5DF0DA7C2A307296000F3EFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DAC066072A503B9C00DDAAE5 /* Mock */,
 				5D5CAAB72A03A9C100E14945 /* assets.xcassets */,
 				5DFBA9372A307729002AF39A /* Pallete.swift */,
 				5DFBA94E2A30E842002AF39A /* Fonts.swift */,
@@ -369,7 +387,6 @@
 			children = (
 				5DFBA9402A3084BD002AF39A /* View+Ext.swift */,
 				528F7FA72A405481006A3F79 /* KeyboardModifier.swift */,
-				DA3738462A4DA11000AF038C /* HideTabBarModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +429,14 @@
 				0C1AC9952A4C06CF00912AAC /* TabBar.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DAC066072A503B9C00DDAAE5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DAC066082A503BA800DDAAE5 /* MockChatData.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,14 +574,16 @@
 				5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */,
 				5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */,
 				0C1AC9752A49A86900912AAC /* CreateMeetScreenViewModel.swift in Sources */,
+				0C8A7FEE2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift in Sources */,
 				5DFBA9412A3084BE002AF39A /* View+Ext.swift in Sources */,
 				5DFBA9332A307615002AF39A /* RegistrationPersonView.swift in Sources */,
+				0C7D91542A4EFB9E0090F32B /* SearchScreenTwoModel.swift in Sources */,
 				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
 				0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
+				DAC066092A503BA800DDAAE5 /* MockChatData.swift in Sources */,
 				0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */,
-				DA3738472A4DA11000AF038C /* HideTabBarModifier.swift in Sources */,
 				52CD9A1B2A3B003E00C4727C /* AllChatsScreenViewModel.swift in Sources */,
 				528F7FAF2A4059CD006A3F79 /* ChatScreenModel.swift in Sources */,
 				52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */,
@@ -570,6 +597,7 @@
 				5DFBA9432A3084D6002AF39A /* NetworkManager.swift in Sources */,
 				52D1DA3F2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift in Sources */,
 				0C25A6F92A4D9A4100E27F9D /* SearchScreenView.swift in Sources */,
+				0C7D91582A4EFC170090F32B /* SearchScreenTwoView.swift in Sources */,
 				0C25A6F72A4D9A2D00E27F9D /* SearchScreenModel.swift in Sources */,
 				5D6173822A3C9AC800D84BF5 /* CategoryViewModel.swift in Sources */,
 				52CD9A252A3B10DA00C4727C /* ChatPreviewView.swift in Sources */,
@@ -751,10 +779,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TinDev/Preview Content\"";
-				DEVELOPMENT_TEAM = CS2G47Y936;
+				DEVELOPMENT_TEAM = KG89CXC5J4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -769,8 +798,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.freewifi";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TinDev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,10 +812,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TinDev/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KG89CXC5J4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
