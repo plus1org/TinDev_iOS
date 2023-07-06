@@ -20,7 +20,7 @@ struct LoginScreenView: View {
                 VStack(spacing: 30) {
                     Text(Localizable.LoginModule.loginTitle).font(Fonts.regular32)
                     
-                    SegmentedPicker(titles: ["Телефон", "Почта"],
+                    SegmentedPicker(titles: [Localizable.PasswordRecoveryModule.phone, Localizable.PasswordRecoveryModule.email],
                                     selectedItemColor: Pallete.customWhite,
                                     backgroundColor: Pallete.customGray,
                                     selectedItemFontColor: Pallete.customBlack,
