@@ -19,6 +19,9 @@
 		0C7D91582A4EFC170090F32B /* SearchScreenTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */; };
 		0C8A7FEE2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */; };
 		0CA5872E2A55EADB00CD2263 /* SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5872D2A55EADB00CD2263 /* SegmentedPicker.swift */; };
+		0CABB4CD2A55F1AA0072E1CB /* RegistrationTypeChoiseScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CABB4CC2A55F1AA0072E1CB /* RegistrationTypeChoiseScreenView.swift */; };
+		0CABB4CF2A55F1C00072E1CB /* RegistrationTypeChoiseScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CABB4CE2A55F1C00072E1CB /* RegistrationTypeChoiseScreenModel.swift */; };
+		0CABB4D12A55F1CE0072E1CB /* RegistrationTypeChoiseScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CABB4D02A55F1CE0072E1CB /* RegistrationTypeChoiseScreenViewModel.swift */; };
 		528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FA72A405481006A3F79 /* KeyboardModifier.swift */; };
 		528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */; };
 		528F7FAD2A4059C2006A3F79 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */; };
@@ -97,6 +100,9 @@
 		0C7D91572A4EFC170090F32B /* SearchScreenTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoView.swift; sourceTree = "<group>"; };
 		0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTwoViewModel.swift; sourceTree = "<group>"; };
 		0CA5872D2A55EADB00CD2263 /* SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPicker.swift; sourceTree = "<group>"; };
+		0CABB4CC2A55F1AA0072E1CB /* RegistrationTypeChoiseScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTypeChoiseScreenView.swift; sourceTree = "<group>"; };
+		0CABB4CE2A55F1C00072E1CB /* RegistrationTypeChoiseScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTypeChoiseScreenModel.swift; sourceTree = "<group>"; };
+		0CABB4D02A55F1CE0072E1CB /* RegistrationTypeChoiseScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTypeChoiseScreenViewModel.swift; sourceTree = "<group>"; };
 		528F7FA72A405481006A3F79 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		528F7FAA2A4059AD006A3F79 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewModel.swift; sourceTree = "<group>"; };
 		528F7FAC2A4059C2006A3F79 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
@@ -201,6 +207,16 @@
 				0C8A7FED2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift */,
 			);
 			path = SearchScreenTwo;
+			sourceTree = "<group>";
+		};
+		0CABB4CB2A55F1790072E1CB /* RegistrationTypeChoiseScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0CABB4CE2A55F1C00072E1CB /* RegistrationTypeChoiseScreenModel.swift */,
+				0CABB4CC2A55F1AA0072E1CB /* RegistrationTypeChoiseScreenView.swift */,
+				0CABB4D02A55F1CE0072E1CB /* RegistrationTypeChoiseScreenViewModel.swift */,
+			);
+			path = RegistrationTypeChoiseScreen;
 			sourceTree = "<group>";
 		};
 		528F7FA92A40593C006A3F79 /* ChatScreen */ = {
@@ -344,6 +360,7 @@
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0CABB4CB2A55F1790072E1CB /* RegistrationTypeChoiseScreen */,
 				0C7D91522A4EFB320090F32B /* SearchScreenTwo */,
 				0C513B1E2A4D5A2A0044AFF9 /* SearchScreen */,
 				0C1AC96F2A49A73900912AAC /* CreateMeetScreen */,
@@ -575,6 +592,7 @@
 				5D6173762A3B18EA00D84BF5 /* FiltersView.swift in Sources */,
 				5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */,
 				5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */,
+				0CABB4CF2A55F1C00072E1CB /* RegistrationTypeChoiseScreenModel.swift in Sources */,
 				5D61737B2A3B192400D84BF5 /* FiltersViewModel.swift in Sources */,
 				0C1AC9752A49A86900912AAC /* CreateMeetScreenViewModel.swift in Sources */,
 				0C8A7FEE2A4F02D000C24BD9 /* SearchScreenTwoViewModel.swift in Sources */,
@@ -598,6 +616,7 @@
 				52CD9A1F2A3B005000C4727C /* AllChatsScreenModel.swift in Sources */,
 				52CD9A232A3B0FE800C4727C /* SearchBarView.swift in Sources */,
 				5DFBA9432A3084D6002AF39A /* NetworkManager.swift in Sources */,
+				0CABB4CD2A55F1AA0072E1CB /* RegistrationTypeChoiseScreenView.swift in Sources */,
 				52D1DA3F2A377B9B001E8AD6 /* PasswordRecoveryScreenModel.swift in Sources */,
 				0C25A6F92A4D9A4100E27F9D /* SearchScreenView.swift in Sources */,
 				0C7D91582A4EFC170090F32B /* SearchScreenTwoView.swift in Sources */,
@@ -606,6 +625,7 @@
 				5D6173822A3C9AC800D84BF5 /* CategoryViewModel.swift in Sources */,
 				52CD9A252A3B10DA00C4727C /* ChatPreviewView.swift in Sources */,
 				5DFBA93E2A307B5D002AF39A /* Buttons.swift in Sources */,
+				0CABB4D12A55F1CE0072E1CB /* RegistrationTypeChoiseScreenViewModel.swift in Sources */,
 				5DFBA93A2A30773D002AF39A /* Images.swift in Sources */,
 				5DFBA9352A30762A002AF39A /* RegistrationPersonViewModel.swift in Sources */,
 				5DFBA9312A3075F8002AF39A /* RegistrationPersonModel.swift in Sources */,

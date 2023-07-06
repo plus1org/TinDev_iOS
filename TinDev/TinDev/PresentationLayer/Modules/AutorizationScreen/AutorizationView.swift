@@ -5,22 +5,22 @@
 import SwiftUI
 
 struct AutorizationView: View {
-    @State private var isRegistrationScreenPresented = false
+    @State private var isRegistrationTypeChoiseScreenViewPresented = false
     @State private var isLoginScreenPresented = false
     
     var body: some View {
         
-        VStack(spacing: 14) {
+        VStack() {
             
-            SolidButton(action: {self.isRegistrationScreenPresented = true},
+            SolidButton(action: {self.isRegistrationTypeChoiseScreenViewPresented = true},
                         title: Localizable.AutorizationModule.registration,
                         disabled: false,
                         font: .headline,
                         frameMaxWidth: .infinity,
                         foregroundColor: Pallete.customGray)
             //MARK: Navigation
-            .fullScreenCover(isPresented: $isRegistrationScreenPresented) {
-                RegistrationPersonView()
+            .fullScreenCover(isPresented: $isRegistrationTypeChoiseScreenViewPresented) {
+                RegistrationTypeChoiseScreenView()
             }
             
             BorderButton(action: {self.isLoginScreenPresented = true},
