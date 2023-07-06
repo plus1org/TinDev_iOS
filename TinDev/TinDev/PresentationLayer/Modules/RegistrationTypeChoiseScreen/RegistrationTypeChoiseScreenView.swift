@@ -27,10 +27,14 @@ struct RegistrationTypeChoiseScreenView: View {
                             .padding(.bottom)
                         
                         HStack(spacing: UIScreen.main.bounds.width * 0.03) {
-                            SegmentedPicker(titles: [Localizable.RegestrationModule.standart,Localizable.RegestrationModule.business], selectedItemColor: Pallete.mainColor, backgroundColor: Pallete.customWhite, selectedItemFontColor: .white, defaultItemFontColor: Pallete.customDarkGray,
+                            SegmentedPicker(titles: [Localizable.RegestrationModule.standart,Localizable.RegestrationModule.business],
+                                            selectedItemColor: Pallete.mainColor,
+                                            backgroundColor: Pallete.customGray,
+                                            selectedItemFontColor: .white,
+                                            defaultItemFontColor: Pallete.customDarkGray,
                                             borderColor: .clear)
+                            .padding(.horizontal)
                         }
-                        
                     }
                     
                     SolidButton(action: {

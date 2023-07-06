@@ -44,7 +44,7 @@ enum Localizable {
     enum PasswordRecoveryModule {
         static let phone = "Телефон"
         static let email = "Почта"
-        static let passwordRecoveryTitle = "Восстановление пароля"
+        static let passwordRecoveryTitle = "Восстановление \n пароля"
         static let phoneNumber = "Номер телефона"
         static let passwordRecovery = "Восстановить пароль"
         static let smsMessage = "На ваш номер отправлено СМС с инструкциями по восстановлению пароля"
@@ -111,7 +111,7 @@ enum Localizable {
     }
     
     enum ChatModule {
-        static let userIsNotConfirmed = "Пользователь не подтвержден, может быть мошенником"
+        static let userIsNotConfirmed = "Пользователь не подтвержден, \n может быть мошенником"
         static let message = "Сообщение"
         static let sendButton = "Отправить"
     }

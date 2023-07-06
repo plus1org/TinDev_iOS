@@ -18,7 +18,6 @@ struct PasswordRecoveryScreenView: View {
                     Text(Localizable.PasswordRecoveryModule.passwordRecoveryTitle)
                         .font(Fonts.regular32)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 25)
                     
                     SegmentedPicker(titles: [Localizable.PasswordRecoveryModule.phone, Localizable.PasswordRecoveryModule.email],
                                     selectedItemColor: Pallete.customWhite,
@@ -29,6 +28,7 @@ struct PasswordRecoveryScreenView: View {
                     .frame(width: 255)
                 }
                 .padding(.bottom, 30)
+                
                 VStack(spacing: 15) {
                     
                     TextFieldStandart(headerText: Localizable.PasswordRecoveryModule.phoneNumber,

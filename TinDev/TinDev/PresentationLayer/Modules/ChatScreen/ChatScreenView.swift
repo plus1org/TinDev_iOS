@@ -20,7 +20,6 @@ struct ChatView: View {
                 Text(Localizable.ChatModule.userIsNotConfirmed)
                     .foregroundColor(Pallete.customRed)
                     .font(Fonts.regular14)
-                    .frame(width: 250)
                     .multilineTextAlignment(.center)
                     .padding()
             }

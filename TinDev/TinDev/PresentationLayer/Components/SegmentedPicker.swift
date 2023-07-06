@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct SegmentedPicker: View {
-    
-    @State private var selection = 0
-    @State private var frames = Array<CGRect>(repeating: .zero, count: 5)
-    
     private let titles: [String]
     private let selectedItemColor: Color
     private let backgroundColor: Color
@@ -19,7 +15,15 @@ struct SegmentedPicker: View {
     private let defaultItemFontColor: Color
     private let borderColor: Color
     
-    init(titles: [String], selectedItemColor: Color, backgroundColor: Color, selectedItemFontColor: Color, defaultItemFontColor: Color, borderColor: Color = .gray) {
+    @State private var selectedSegment = 0
+    @State private var segmentOffset: CGFloat = 0
+    
+    init(titles: [String],
+         selectedItemColor: Color,
+         backgroundColor: Color,
+         selectedItemFontColor: Color,
+         defaultItemFontColor: Color,
+         borderColor: Color) {
         self.titles = titles
         self.selectedItemColor = selectedItemColor
         self.backgroundColor = backgroundColor
@@ -28,59 +32,44 @@ struct SegmentedPicker: View {
         self.borderColor = borderColor
     }
     
-    var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                ZStack {
-                    HStack(spacing: 11) {
-                        ForEach(self.titles.indices, id: \.self) { index in
-                            Button(action: {
-                                self.selection = index
-                            }) {
-                                Text(self.titles[index])
-                                    .foregroundColor(selection == index ? selectedItemFontColor : defaultItemFontColor)
-                                    .font(Fonts.regular14)
-                                    .frame(maxWidth: .infinity)
-                                    .background {
-                                        GeometryReader { geo in
-                                            Color.clear.onAppear{
-                                                self.setFrame(index: index, frame: geo.frame(in: .global))
-                                            }
-                                        }
-                                    }
-                            }
-                        }
-                    }
-                    .frame(height: 38)
-                    .padding(2)
-                    .background(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(selectedItemColor)
-                            .frame(width: self.frames[self.selection].width, height: 38 - 2)
-                            .offset(x: self.frames[self.selection].minX - self.frames[0].minX)
-                            .padding(.leading, 1)
-                    }
-                    .background(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(borderColor, lineWidth: 1)
-                            .frame(width: self.frames[self.selection].width, height: 38 - 2)
-                            .offset(x: self.frames[self.selection].minX - self.frames[0].minX)
-                            .padding(.leading, 1)
-                    }
-                }
-                .background(backgroundColor)
-                .animation(.spring(), value: selection)
-            }
-            .cornerRadius(12)
-            .padding()
-        }
-        .frame(maxHeight: 38)
+    private func calculateOffset(geometry: GeometryProxy, selectedIndex: Int) -> CGFloat {
+        return CGFloat(selectedIndex) * (geometry.size.width / CGFloat(titles.count)) + 1
     }
     
-    private func setFrame(index: Int, frame: CGRect) {
-        DispatchQueue.main.async {
-            self.frames[index] = frame
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(selectedItemColor)
+                    .frame(width: (geometry.size.width / CGFloat(titles.count)) - 2, height: 37)
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(borderColor, lineWidth: 1))
+                    .offset(x: segmentOffset)
+                
+                HStack {
+                    ForEach(titles.indices, id: \.self) { index in
+                        Button(action: {
+                            withAnimation {
+                                selectedSegment = index
+                                segmentOffset = calculateOffset(geometry: geometry, selectedIndex: index)
+                            }
+                        }) {
+                            Text(titles[index])
+                                .font(Fonts.regular14)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .frame(height: 39)
+                                .foregroundColor(selectedSegment == index ? selectedItemFontColor : defaultItemFontColor)
+                        }
+                    }
+                }
+            }
+            .background(backgroundColor)
+            .cornerRadius(12)
+            .onAppear {
+                segmentOffset = calculateOffset(geometry: geometry, selectedIndex: selectedSegment)
+            }
         }
+        .frame(maxHeight: 39)
+        .cornerRadius(12)
     }
 }
 
@@ -88,7 +77,13 @@ struct SegmentedPickerView: View {
     var body: some View {
         VStack {
             Spacer()
-            SegmentedPicker(titles: ["Стандартный","Бизнес-аккаунт"], selectedItemColor: .white, backgroundColor: Pallete.customGray, selectedItemFontColor: .black, defaultItemFontColor: .black, borderColor: .black)
+            SegmentedPicker(titles: [Localizable.RegestrationModule.standart,Localizable.RegestrationModule.business],
+                            selectedItemColor: .white,
+                            backgroundColor: .red,
+                            selectedItemFontColor: .black,
+                            defaultItemFontColor: Pallete.customDarkGray,
+                            borderColor: .black)
+            .padding()
             Spacer()
         }
     }
