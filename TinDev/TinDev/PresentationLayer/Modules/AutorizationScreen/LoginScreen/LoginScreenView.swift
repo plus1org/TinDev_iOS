@@ -29,6 +29,7 @@ struct LoginScreenView: View {
                     .frame(width: 255)
                 }
                 .padding(.bottom, 30)
+                
                 VStack(spacing: 15) {
                     
                     TextFieldStandart(headerText: Localizable.LoginModule.phoneNumber,
