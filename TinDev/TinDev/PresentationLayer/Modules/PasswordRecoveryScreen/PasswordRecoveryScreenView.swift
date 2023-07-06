@@ -14,10 +14,22 @@ struct PasswordRecoveryScreenView: View {
         NavigationView {
             VStack {
                 Spacer()
-                VStack(spacing: 15) {
+                VStack(spacing: 30) {
                     Text(Localizable.PasswordRecoveryModule.passwordRecoveryTitle)
                         .font(Fonts.regular32)
                         .multilineTextAlignment(.center)
+                        .padding(.horizontal, 25)
+                    
+                    SegmentedPicker(titles: [Localizable.PasswordRecoveryModule.phone, Localizable.PasswordRecoveryModule.email],
+                                    selectedItemColor: Pallete.customWhite,
+                                    backgroundColor: Pallete.customGray,
+                                    selectedItemFontColor: Pallete.customBlack,
+                                    defaultItemFontColor: Pallete.customDarkGray,
+                                    borderColor: Pallete.customBlack)
+                    .frame(width: 255)
+                }
+                .padding(.bottom, 30)
+                VStack(spacing: 15) {
                     
                     TextFieldStandart(headerText: Localizable.PasswordRecoveryModule.phoneNumber,
                                       text: phoneNumber,

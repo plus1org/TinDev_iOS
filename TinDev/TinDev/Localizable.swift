@@ -30,6 +30,8 @@ enum Localizable {
     }
     
     enum LoginModule {
+        static let phone = "Телефон"
+        static let email = "Почта"
         static let loginTitle = "Вход"
         static let phoneNumber = "Номер телефона"
         static let password = "Пароль"
@@ -40,6 +42,8 @@ enum Localizable {
     }
     
     enum PasswordRecoveryModule {
+        static let phone = "Телефон"
+        static let email = "Почта"
         static let passwordRecoveryTitle = "Восстановление пароля"
         static let phoneNumber = "Номер телефона"
         static let passwordRecovery = "Восстановить пароль"
