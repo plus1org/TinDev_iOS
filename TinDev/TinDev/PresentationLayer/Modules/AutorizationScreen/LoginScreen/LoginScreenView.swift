@@ -17,8 +17,19 @@ struct LoginScreenView: View {
         NavigationView {
             VStack {
                 Spacer()
-                VStack(spacing: 15) {
+                VStack(spacing: 30) {
                     Text(Localizable.LoginModule.loginTitle).font(Fonts.regular32)
+                    
+                    SegmentedPicker(titles: ["Телефон", "Почта"],
+                                    selectedItemColor: Pallete.customWhite,
+                                    backgroundColor: Pallete.customGray,
+                                    selectedItemFontColor: Pallete.customBlack,
+                                    defaultItemFontColor: Pallete.customDarkGray,
+                                    borderColor: Pallete.customBlack)
+                    .frame(width: 255)
+                }
+                .padding(.bottom, 30)
+                VStack(spacing: 15) {
                     
                     TextFieldStandart(headerText: Localizable.LoginModule.phoneNumber,
                                       text: phoneNumber,
