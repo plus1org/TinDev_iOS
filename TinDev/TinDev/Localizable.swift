@@ -147,4 +147,10 @@ enum Localizable {
         static let jazzdiscription = "Jazz Funk"
     }
     
+    enum EventChatInfoScreenModile {
+        static let usersCounter = "участников"
+        static let inviteButton = "Пригласить в чат"
+        static let leaveChatButton = "Покинуть беседу"
+    }
+    
 }
