@@ -5,15 +5,16 @@
 import SwiftUI
 
 struct ChatPreviewView: View {
+   
     var chat: Chat
-
+    
     var body: some View {
-        HStack(spacing: 16) {
+        HStack(alignment: .top, spacing: 16) {
             Image(chat.personImage)
                 .resizable()
                 .frame(width: 70, height: 70)
                 .clipShape(Circle())
-
+            
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
                     Text(chat.personName)
@@ -33,7 +34,7 @@ struct ChatPreviewView: View {
                         .font(.body)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.leading)
-                 
+                    
                     Spacer()
                     
                     Text("\(chat.messages.count)")
@@ -51,18 +52,7 @@ struct ChatPreviewView: View {
 }
 
 struct ChatPreviewView_Previews: PreviewProvider {
-    static var chat = Chat(
-        isConfirmed: true, isMutted: true, personImage: "person",
-        personName: "Игорь Немцов",
-        messageDate: "15 июн",
-        messages: [
-            Message(text: "Привет, как дела?", isUserMessage: false),
-            Message(text: "Привет, все отлично!", isUserMessage: true),
-            Message(text: "Договорились, тогда я буду рассчитывать на тебя", isUserMessage: false)
-        ]
-    )
-
     static var previews: some View {
-        ChatPreviewView(chat: chat)
+        ChatPreviewView(chat: MockChatData.chats[2])
     }
 }
