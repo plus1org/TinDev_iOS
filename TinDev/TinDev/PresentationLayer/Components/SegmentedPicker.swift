@@ -69,7 +69,6 @@ struct SegmentedPicker: View {
             }
         }
         .frame(maxHeight: 39)
-        .cornerRadius(12)
     }
 }
 
