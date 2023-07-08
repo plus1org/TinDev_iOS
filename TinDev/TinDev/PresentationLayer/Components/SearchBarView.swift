@@ -22,6 +22,7 @@ struct SearchBarView: View {
                     .foregroundColor(.gray)
             }
             .opacity(text.isEmpty ? 0 : 1)
+            .padding(.trailing, 8)
         }
         .frame(height: 36)
         .background(Color(.systemGray6))

@@ -71,9 +71,11 @@ struct ChatView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: EventChatInfoScreenView()) {
-                    Image(systemName: "ellipsis")
+                    Image(systemName: Images.ellipsis)
                         .frame(width: 23, height: 5)
                         .foregroundColor(Pallete.customBlack)
+                        .padding(10)
+                        .contentShape(Rectangle())
                 }
             }
         }

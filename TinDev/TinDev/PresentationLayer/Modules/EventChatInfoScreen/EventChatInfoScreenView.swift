@@ -18,38 +18,28 @@ struct EventChatInfoScreenView: View {
                     .frame(width: 120, height: 120)
                 Text("Прогулка")
                     .font(.title2).bold()
-                Text("\(MockUsersData.users.count) \(Localizable.EventChatInfoScreenModile.usersCounter)")
+                Text("\(MockUsersData.users.count) \(Localizable.EventChatInfoScreenModule.usersCounter)")
                     .font(Fonts.regular15)
                     .foregroundColor(Pallete.customDarkGray)
             }
             .padding(.top, 12)
             VStack {
                 SmallButton(action: {},
-                            title: Localizable.EventChatInfoScreenModile.inviteButton,
+                            title: Localizable.EventChatInfoScreenModule.inviteButton,
                             disabled: false,
                             font: Fonts.regular14,
                             frameMaxWidth: .infinity,
                             foregroundColor: Pallete.customWhite,
                             backgroundColor: Pallete.mainColor,
-                            imageName: "person.badge.plus")
+                            imageName: Images.personBadgePlus)
                 .padding(.top, 20)
             }
             
-            ScrollView {
-                VStack(spacing: 16) {
-                    ForEach(users) { user in
-                        UserPreviewView(user: user)
-                    }
-                }
-                .frame(maxWidth: .infinity)
-            }
-            .background(Pallete.customGray)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .padding(.vertical, 28)
-            .padding(.horizontal, 16)
+            UserScrollView(users: MockUsersData.users)
+                .padding(.vertical, 28)
             
             SolidButton(action: {},
-                        title: Localizable.EventChatInfoScreenModile.leaveChatButton,
+                        title: Localizable.EventChatInfoScreenModule.leaveChatButton,
                         disabled: false,
                         font: Fonts.regular16,
                         frameMaxWidth: .infinity,
@@ -58,7 +48,6 @@ struct EventChatInfoScreenView: View {
         }
     }
 }
-
 
 struct EventChatInfoScreenView_Previews: PreviewProvider {
     static var previews: some View {

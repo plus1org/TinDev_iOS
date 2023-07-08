@@ -13,4 +13,7 @@ struct Images {
     static let closeButton = "xmark.circle.fill"
     static let muteIcon = "speaker.slash.fill"
     static let person = "person.fill"
+    static let personBadgePlus = "person.badge.plus"
+    static let ellipsis = "ellipsis"
+
 }
