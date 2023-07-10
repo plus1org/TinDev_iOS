@@ -24,8 +24,8 @@ struct RegularButtons: View {
                              frameMaxWidth: .infinity,
                              foregroundColor: Pallete.mainColor
                 )
-                SmallButton(action: {},
-                            title: "Small Button",
+                FlatButton(action: {},
+                            title: "Flat Button",
                             disabled: false,
                             font: .headline,
                             frameMaxWidth: .infinity,
@@ -33,6 +33,25 @@ struct RegularButtons: View {
                             backgroundColor: Pallete.customGray,
                             imageName: "person"
                 )
+                HStack(spacing: 8) {
+                    SmallButton(action: {},
+                                title: "Добавить",
+                                disabled: false,
+                                font: Fonts.regular13,
+                                frameMaxWidth: 96,
+                                foregroundColor: Pallete.customWhite,
+                                backgroundColor: Pallete.mainColor
+                    )
+                    SmallButton(action: {},
+                                title: "Отклонить",
+                                disabled: false,
+                                font: Fonts.regular13,
+                                frameMaxWidth: 96,
+                                foregroundColor: Pallete.customBlack,
+                                backgroundColor: Pallete.customGray
+                    )
+                }
+                .padding()
             }
         }
     }
@@ -88,7 +107,7 @@ struct BorderButton: View {
     }
 }
 
-struct SmallButton: View {
+struct FlatButton: View {
     var action: () -> Void
     var title: String
     var disabled: Bool
@@ -118,6 +137,38 @@ struct SmallButton: View {
         }
         .disabled(disabled)
         .padding(.horizontal)
+    }
+}
+
+struct SmallButton: View {
+    var action: () -> Void
+    var title: String
+    var disabled: Bool
+    var font: Font
+    var frameMaxWidth: CGFloat
+    var foregroundColor: Color
+    var backgroundColor: Color
+    var imageName: String?
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                Spacer()
+                if let imageName = imageName {
+                    Image(systemName: imageName)
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                }
+                Text(title)
+                    .font(font)
+                Spacer()
+            }
+            .foregroundColor(foregroundColor)
+            .frame(height: 32)
+            .background(backgroundColor)
+            .cornerRadius(12)
+        }
+        .disabled(disabled)
     }
 }
 

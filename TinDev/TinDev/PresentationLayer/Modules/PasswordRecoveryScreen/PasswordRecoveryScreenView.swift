@@ -40,7 +40,7 @@ struct PasswordRecoveryScreenView: View {
                         Text(Localizable.PasswordRecoveryModule.smsMessage)
                             .font(Fonts.regular12)
                             .multilineTextAlignment(.leading)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Pallete.customBlue)
                         Spacer()
                     }
                 }.padding()

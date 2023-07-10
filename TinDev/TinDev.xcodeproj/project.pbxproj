@@ -75,6 +75,10 @@
 		DAB0795D2A595E0800ED6958 /* FriendsListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0795C2A595E0800ED6958 /* FriendsListScreenViewModel.swift */; };
 		DAB0795F2A595E1100ED6958 /* FriendsListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0795E2A595E1100ED6958 /* FriendsListScreenView.swift */; };
 		DAB079612A595E1800ED6958 /* FriendsListScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB079602A595E1800ED6958 /* FriendsListScreenModel.swift */; };
+		DAB386042A5BEEAC005857D0 /* FriendsRequestScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB386032A5BEEAC005857D0 /* FriendsRequestScreenViewModel.swift */; };
+		DAB386062A5BEEB4005857D0 /* FriendsRequestScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB386052A5BEEB4005857D0 /* FriendsRequestScreenView.swift */; };
+		DAB386082A5BEEBA005857D0 /* FriendsRequestScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB386072A5BEEBA005857D0 /* FriendsRequestScreenModel.swift */; };
+		DAB3860A2A5BEF00005857D0 /* FriendRequestPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB386092A5BEF00005857D0 /* FriendRequestPreviewView.swift */; };
 		DAC066092A503BA800DDAAE5 /* MockChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC066082A503BA800DDAAE5 /* MockChatData.swift */; };
 		DAEA300C2A5833CD00FA1EEB /* UserPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA300B2A5833CD00FA1EEB /* UserPreviewView.swift */; };
 		DAEA300E2A5834F700FA1EEB /* MockUsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA300D2A5834F700FA1EEB /* MockUsersData.swift */; };
@@ -169,6 +173,10 @@
 		DAB0795C2A595E0800ED6958 /* FriendsListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListScreenViewModel.swift; sourceTree = "<group>"; };
 		DAB0795E2A595E1100ED6958 /* FriendsListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListScreenView.swift; sourceTree = "<group>"; };
 		DAB079602A595E1800ED6958 /* FriendsListScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListScreenModel.swift; sourceTree = "<group>"; };
+		DAB386032A5BEEAC005857D0 /* FriendsRequestScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestScreenViewModel.swift; sourceTree = "<group>"; };
+		DAB386052A5BEEB4005857D0 /* FriendsRequestScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestScreenView.swift; sourceTree = "<group>"; };
+		DAB386072A5BEEBA005857D0 /* FriendsRequestScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestScreenModel.swift; sourceTree = "<group>"; };
+		DAB386092A5BEF00005857D0 /* FriendRequestPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestPreviewView.swift; sourceTree = "<group>"; };
 		DAC066082A503BA800DDAAE5 /* MockChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatData.swift; sourceTree = "<group>"; };
 		DAEA300B2A5833CD00FA1EEB /* UserPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreviewView.swift; sourceTree = "<group>"; };
 		DAEA300D2A5834F700FA1EEB /* MockUsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersData.swift; sourceTree = "<group>"; };
@@ -380,6 +388,7 @@
 		5DF0DA762A306F35000F3EFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAB386022A5BEE47005857D0 /* FriendsRequestScreen */,
 				DAB0795B2A595DE600ED6958 /* FriendsListScreen */,
 				0CABB4CB2A55F1790072E1CB /* RegistrationTypeChoiseScreen */,
 				0C7D91522A4EFB320090F32B /* SearchScreenTwo */,
@@ -466,6 +475,7 @@
 				5DFBA94A2A309148002AF39A /* CircleView.swift */,
 				5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */,
 				52CD9A222A3B0FE800C4727C /* SearchBarView.swift */,
+				DAB386092A5BEF00005857D0 /* FriendRequestPreviewView.swift */,
 				DAEA300B2A5833CD00FA1EEB /* UserPreviewView.swift */,
 				52CD9A242A3B10DA00C4727C /* ChatPreviewView.swift */,
 				DAB079592A595D0800ED6958 /* UserScrollView.swift */,
@@ -494,6 +504,16 @@
 				DAB0795C2A595E0800ED6958 /* FriendsListScreenViewModel.swift */,
 			);
 			path = FriendsListScreen;
+			sourceTree = "<group>";
+		};
+		DAB386022A5BEE47005857D0 /* FriendsRequestScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DAB386072A5BEEBA005857D0 /* FriendsRequestScreenModel.swift */,
+				DAB386052A5BEEB4005857D0 /* FriendsRequestScreenView.swift */,
+				DAB386032A5BEEAC005857D0 /* FriendsRequestScreenViewModel.swift */,
+			);
+			path = FriendsRequestScreen;
 			sourceTree = "<group>";
 		};
 		DAC066072A503B9C00DDAAE5 /* Mock */ = {
@@ -637,6 +657,7 @@
 			files = (
 				5D6173762A3B18EA00D84BF5 /* FiltersView.swift in Sources */,
 				5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */,
+				DAB3860A2A5BEF00005857D0 /* FriendRequestPreviewView.swift in Sources */,
 				DAB0795F2A595E1100ED6958 /* FriendsListScreenView.swift in Sources */,
 				5D6173842A3C9E6200D84BF5 /* CategoryCell.swift in Sources */,
 				0CABB4CF2A55F1C00072E1CB /* RegistrationTypeChoiseScreenModel.swift in Sources */,
@@ -648,6 +669,7 @@
 				5DFBA9332A307615002AF39A /* RegistrationPersonView.swift in Sources */,
 				0C7D91542A4EFB9E0090F32B /* SearchScreenTwoModel.swift in Sources */,
 				5D44C6622A3435D600DBE84D /* ConfirmPersonViewModel.swift in Sources */,
+				DAB386082A5BEEBA005857D0 /* FriendsRequestScreenModel.swift in Sources */,
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
 				0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
@@ -659,6 +681,7 @@
 				52A7039D2A37850600E65C16 /* LoginScreenViewModel.swift in Sources */,
 				52D1DA3D2A377B8C001E8AD6 /* PasswordRecoveryScreenView.swift in Sources */,
 				528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */,
+				DAB386062A5BEEB4005857D0 /* FriendsRequestScreenView.swift in Sources */,
 				0C25A6FB2A4D9A5200E27F9D /* SearchScreenViewModel.swift in Sources */,
 				DAB0795A2A595D0800ED6958 /* UserScrollView.swift in Sources */,
 				528F7FA82A405481006A3F79 /* KeyboardModifier.swift in Sources */,
@@ -697,6 +720,7 @@
 				528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */,
 				5D44C6602A3435C200DBE84D /* ConfirmPersonModel.swift in Sources */,
 				DA6453342A580F48008980C5 /* EventChatInfoScreenView.swift in Sources */,
+				DAB386042A5BEEAC005857D0 /* FriendsRequestScreenViewModel.swift in Sources */,
 				DAB079612A595E1800ED6958 /* FriendsListScreenModel.swift in Sources */,
 				52A703A12A37852400E65C16 /* LoginScreenModel.swift in Sources */,
 				52CD9A1D2A3B004600C4727C /* AllChatsScreenView.swift in Sources */,

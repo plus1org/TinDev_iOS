@@ -12,4 +12,5 @@ struct User: Identifiable {
     let name: String
     let isOnline: Bool
     let imageName: String
+    let message: String
 }
