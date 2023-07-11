@@ -163,4 +163,14 @@ enum Localizable {
         static let friendRequestsButton = "Заявки в друзья"
         static let friendsCounter = "Друзья"
     }
+    
+    enum FriendRequestPreviewModule {
+        static let readAllButton =  "прочитать"
+        static let acceptButton =  "Добавить"
+        static let denyButton =  "Отклонить"
+    }
+    
+    enum FriendsRequestScreenModule {
+        static let requestsCounter = "Заявки в друзья"
+    }
 }

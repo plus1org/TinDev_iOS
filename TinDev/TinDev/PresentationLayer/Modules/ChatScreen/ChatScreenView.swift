@@ -70,7 +70,7 @@ struct ChatView: View {
         .navigationTitle(chat.personName)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: EventChatInfoScreenView()) {
+                NavigationLink(destination: FriendsRequestScreenView()) {
                     Image(systemName: Images.ellipsis)
                         .frame(width: 23, height: 5)
                         .foregroundColor(Pallete.customBlack)

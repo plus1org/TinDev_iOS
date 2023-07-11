@@ -24,7 +24,7 @@ struct EventChatInfoScreenView: View {
             }
             .padding(.top, 12)
             VStack {
-                SmallButton(action: {},
+                FlatButton(action: {},
                             title: Localizable.EventChatInfoScreenModule.inviteButton,
                             disabled: false,
                             font: Fonts.regular14,
