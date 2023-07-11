@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserPreviewView: View {
+   
     var user: User
 
     var body: some View {
@@ -17,7 +18,7 @@ struct UserPreviewView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(user.name)
                     .font(.headline)
-                Text(user.isOnline ? "в сети" : "не в сети")
+                Text(user.isOnline ? Localizable.UserPreviewModule.userIsOnline : Localizable.UserPreviewModule.userIsOffline)
                     .font(Fonts.regular14)
                     .foregroundColor(user.isOnline ? .blue : Pallete.customDarkGray)
             }
