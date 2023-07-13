@@ -41,7 +41,7 @@ struct RegistrationPersonView: View {
                             self.isShowingFullScreen = true
                         } label: {
                             Image(systemName: Images.person)
-                            Text(Localizable.RegestrationModule.confirmID)
+                            Text(Localizable.RegestrationPersonModule.confirmID)
                                 .foregroundColor(Pallete.customBlue)
                                 .font(Fonts.regular14)
                         }.frame(maxWidth: .infinity, alignment: .center)
@@ -53,37 +53,37 @@ struct RegistrationPersonView: View {
                     VStack(spacing: 15) {
                         
                         HStack(spacing: 11) {
-                            TextFieldStandart(headerText: Localizable.RegestrationModule.name,
+                            TextFieldStandart(headerText: Localizable.RegestrationPersonModule.name,
                                               text: "",
-                                              placeholder: Localizable.RegestrationModule.namePlaceholder,
+                                              placeholder: Localizable.RegestrationPersonModule.namePlaceholder,
                                               textForegroundColor: Pallete.customBlack)
-                            TextFieldStandart(headerText: Localizable.RegestrationModule.secondName,
+                            TextFieldStandart(headerText: Localizable.RegestrationPersonModule.secondName,
                                               text: "",
-                                              placeholder: Localizable.RegestrationModule.secondNamePlaceholder,
+                                              placeholder: Localizable.RegestrationPersonModule.secondNamePlaceholder,
                                               textForegroundColor: Pallete.customBlack)
                         }
-                        TextFieldStandart(headerText: Localizable.RegestrationModule.date,
+                        TextFieldStandart(headerText: Localizable.RegestrationPersonModule.date,
                                           text: "",
-                                          placeholder: Localizable.RegestrationModule.datePlaceholder,
+                                          placeholder: Localizable.RegestrationPersonModule.datePlaceholder,
                                           textForegroundColor: Pallete.customBlack)
-                        TextFieldStandart(headerText: Localizable.RegestrationModule.email,
+                        TextFieldStandart(headerText: Localizable.RegestrationPersonModule.email,
                                                                   text: "",
-                                                                  placeholder: Localizable.RegestrationModule.emailPlaceholder,
+                                                                  placeholder: Localizable.RegestrationPersonModule.emailPlaceholder,
                                                                   textForegroundColor: Pallete.customBlack)
-                        TextFieldStandart(headerText: Localizable.RegestrationModule.password,
+                        TextFieldStandart(headerText: Localizable.RegestrationPersonModule.password,
                                           text: "",
-                                          placeholder: Localizable.RegestrationModule.passwordPlaceholder,
+                                          placeholder: Localizable.RegestrationPersonModule.passwordPlaceholder,
                                           textForegroundColor: Pallete.customBlack)
-                        TextFieldStandart(headerText: Localizable.RegestrationModule.confirmPassword,
+                        TextFieldStandart(headerText: Localizable.RegestrationPersonModule.confirmPassword,
                                           text: "",
-                                          placeholder: Localizable.RegestrationModule.confirmPasswordPlaceholder,
+                                          placeholder: Localizable.RegestrationPersonModule.confirmPasswordPlaceholder,
                                           textForegroundColor: Pallete.customBlack)
                     }.padding(.horizontal)
                 }
                 Spacer()
                 
                 SolidButton(action: {self.isLoginScreenPresented = true},
-                            title: Localizable.RegestrationModule.regButton,
+                            title: Localizable.RegestrationPersonModule.regButton,
                             disabled: false,
                             font: Fonts.regular16,
                             frameMaxWidth: .infinity,
@@ -92,7 +92,7 @@ struct RegistrationPersonView: View {
                     LoginScreenView()
                 }
             }.background(.white)
-                .navigationBarTitle(Localizable.RegestrationModule.navRegTitle, displayMode: .inline)
+                .navigationBarTitle(Localizable.RegestrationPersonModule.navRegTitle, displayMode: .inline)
                 .font(Fonts.regular17)
                 .toolbar {
                     ToolbarItemGroup(placement: .cancellationAction) {

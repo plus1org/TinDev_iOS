@@ -1,0 +1,5 @@
+//
+//  RegistrationbusinessViewModel.swift
+//
+
+import Foundation

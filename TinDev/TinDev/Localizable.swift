@@ -5,7 +5,7 @@
 import Foundation
 
 enum Localizable {
-    enum RegestrationModule {
+    enum RegestrationPersonModule {
         static let navRegTitle = "Регистрация"
         static let photo = "Ваши фотографии"
         static let confirmID = "Подтвердите личность"
@@ -21,6 +21,20 @@ enum Localizable {
         static let passwordPlaceholder = "Введите пароль"
         static let confirmPassword = "Подтверждение пароля"
         static let confirmPasswordPlaceholder = "Подтвердите пароль"
+        static let regButton = "Зарегистрироваться"
+    }
+    
+    enum RegistrationBusinessModule {
+        static let navRegTitle = "Регистрация"
+        static let orgTitle = "Наименование"
+        static let orgTitlePlaceholder = "Введите наименование"
+        static let adress = "Адрес"
+        static let adressPlaceholder = "Введите адрес"
+        static let inn = "ИНН"
+        static let innPlaceholder = "Введите ИНН"
+        static let addPhoto = "Добавьте фотографии"
+        static let description = "Описание"
+        static let descriptionPlaceholder = "Введите описание"
         static let regButton = "Зарегистрироваться"
     }
     
