@@ -172,5 +172,10 @@ enum Localizable {
     
     enum FriendsRequestScreenModule {
         static let requestsCounter = "Заявки в друзья"
+        static let reportSpam = "Пожаловаться на спам"
+    }
+    
+    enum MenuPopupModule {
+        static let closeButton = "Закрыть"
     }
 }

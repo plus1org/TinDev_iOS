@@ -67,6 +67,8 @@
 		5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94A2A309148002AF39A /* CircleView.swift */; };
 		5DFBA94D2A30BD01002AF39A /* TextFieldStandart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */; };
 		5DFBA94F2A30E842002AF39A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFBA94E2A30E842002AF39A /* Fonts.swift */; };
+		DA00110F2A5F1E6B0014059D /* MenuPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00110E2A5F1E6B0014059D /* MenuPopupView.swift */; };
+		DA4C1FAC2A5FE6CC0008C002 /* HideBackButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C1FAB2A5FE6CC0008C002 /* HideBackButtonText.swift */; };
 		DA6453322A580F3E008980C5 /* EventChatInfoScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6453312A580F3E008980C5 /* EventChatInfoScreenViewModel.swift */; };
 		DA6453342A580F48008980C5 /* EventChatInfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6453332A580F48008980C5 /* EventChatInfoScreenView.swift */; };
 		DA6453362A580F52008980C5 /* EventChatInfoScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6453352A580F52008980C5 /* EventChatInfoScreenModel.swift */; };
@@ -165,6 +167,8 @@
 		5DFBA94A2A309148002AF39A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5DFBA94C2A30BD01002AF39A /* TextFieldStandart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStandart.swift; sourceTree = "<group>"; };
 		5DFBA94E2A30E842002AF39A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DA00110E2A5F1E6B0014059D /* MenuPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPopupView.swift; sourceTree = "<group>"; };
+		DA4C1FAB2A5FE6CC0008C002 /* HideBackButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideBackButtonText.swift; sourceTree = "<group>"; };
 		DA6453312A580F3E008980C5 /* EventChatInfoScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChatInfoScreenViewModel.swift; sourceTree = "<group>"; };
 		DA6453332A580F48008980C5 /* EventChatInfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChatInfoScreenView.swift; sourceTree = "<group>"; };
 		DA6453352A580F52008980C5 /* EventChatInfoScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChatInfoScreenModel.swift; sourceTree = "<group>"; };
@@ -437,6 +441,7 @@
 			children = (
 				5DFBA9402A3084BD002AF39A /* View+Ext.swift */,
 				528F7FA72A405481006A3F79 /* KeyboardModifier.swift */,
+				DA4C1FAB2A5FE6CC0008C002 /* HideBackButtonText.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				5D6173832A3C9E6200D84BF5 /* CategoryCell.swift */,
 				0C1AC9952A4C06CF00912AAC /* TabBar.swift */,
 				0CA5872D2A55EADB00CD2263 /* SegmentedPicker.swift */,
+				DA00110E2A5F1E6B0014059D /* MenuPopupView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 				52A7039F2A37851800E65C16 /* LoginScreenView.swift in Sources */,
 				0C1AC9962A4C06CF00912AAC /* TabBar.swift in Sources */,
 				5DFBA9452A3084E9002AF39A /* AutorizationModel.swift in Sources */,
+				DA00110F2A5F1E6B0014059D /* MenuPopupView.swift in Sources */,
 				DAC066092A503BA800DDAAE5 /* MockChatData.swift in Sources */,
 				0C1AC9712A49A7D500912AAC /* CreateMeetScreenModel.swift in Sources */,
 				52CD9A1B2A3B003E00C4727C /* AllChatsScreenViewModel.swift in Sources */,
@@ -715,6 +722,7 @@
 				0C1AC9732A49A85000912AAC /* CreateMeetScreenView.swift in Sources */,
 				5D5CAAB42A03A9C000E14945 /* TinDevApp.swift in Sources */,
 				5DFBA94B2A309148002AF39A /* CircleView.swift in Sources */,
+				DA4C1FAC2A5FE6CC0008C002 /* HideBackButtonText.swift in Sources */,
 				5D6173802A3C9AB700D84BF5 /* CategoryView.swift in Sources */,
 				DA6453322A580F3E008980C5 /* EventChatInfoScreenViewModel.swift in Sources */,
 				528F7FAB2A4059AD006A3F79 /* ChatScreenViewModel.swift in Sources */,
