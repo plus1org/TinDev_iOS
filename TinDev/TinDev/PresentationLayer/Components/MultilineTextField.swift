@@ -5,116 +5,106 @@
 import SwiftUI
 
 struct MultilineTextField: View {
-
-    private var placeholder: String
-    private var onCommit: (() -> Void)?
-
-    @Binding private var text: String
-    private var internalText: Binding<String> {
-        Binding<String>(get: { self.text } ) {
-            self.text = $0
-            self.showingPlaceholder = $0.isEmpty
+    let headerText: String
+    @State var text: String
+    let placeholder: String
+    let textForegroundColor: Color
+    @State private var isEditing = false
+    @State private var height: CGFloat = 50
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(headerText)
+                .foregroundColor(textForegroundColor)
+                .font(Fonts.regular15)
+            
+            ZStack(alignment: .topLeading) {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(isEditing ? Pallete.customBlack : Pallete.customGray, lineWidth: 2)
+                
+                if text.isEmpty {
+                    Text(placeholder)
+                        .foregroundColor(Color(.placeholderText))
+                        .font(Fonts.regular15)
+                        .padding()
+                }
+                
+                MultilineTextView(text: $text, height: $height, isEditing: $isEditing)
+                    .padding(.horizontal)
+            }
+            .frame(height: height)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UITextView.textDidChangeNotification)) { _ in
+            withAnimation {
+                self.height = textHeight()
+            }
         }
     }
-
-    @State private var dynamicHeight: CGFloat = 100
-    @State private var showingPlaceholder = false
-
-    init (_ placeholder: String = "", text: Binding<String>, onCommit: (() -> Void)? = nil) {
-        self.placeholder = placeholder
-        self.onCommit = onCommit
-        self._text = text
-        self._showingPlaceholder = State<Bool>(initialValue: self.text.isEmpty)
+    
+    private func textHeight() -> CGFloat {
+        let uiTextView = UITextView()
+        uiTextView.text = text
+        uiTextView.font = .systemFont(ofSize: 15)
+        uiTextView.textContainerInset = UIEdgeInsets(top: 16, left: -3, bottom: 16, right: 0)
+        let width = uiTextView.sizeThatFits(CGSize(width: uiTextView.frame.size.width,
+                                                   height: CGFloat.greatestFiniteMagnitude)).height
+        return max(50, width)
     }
+}
 
-    var body: some View {
-        UITextViewWrapper(text: self.internalText, calculatedHeight: $dynamicHeight, onDone: onCommit)
-            .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
-            .padding(.horizontal)
-            .background(placeholderView, alignment: .topLeading)
+struct MultilineTextView: UIViewRepresentable {
+    @Binding var text: String
+    @Binding var height: CGFloat
+    @Binding var isEditing: Bool
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
     }
-
-    var placeholderView: some View {
-        Group {
-            if showingPlaceholder {
-                Text(placeholder)
-                    .foregroundColor(.gray.opacity(0.5))
-                    .padding(.leading)
-            }
+    
+    func makeUIView(context: Context) -> UITextView {
+        let textView = UITextView()
+        textView.delegate = context.coordinator
+        textView.isScrollEnabled = false
+        textView.text = text
+        textView.backgroundColor = .clear
+        textView.font = .systemFont(ofSize: 15)
+        textView.textContainerInset = UIEdgeInsets(top: 16, left: -3, bottom: 16, right: 0)
+        return textView
+    }
+    
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        uiView.text = text
+    }
+    
+    class Coordinator: NSObject, UITextViewDelegate {
+        var parent: MultilineTextView
+        
+        init(_ parent: MultilineTextView) {
+            self.parent = parent
+        }
+        
+        func textViewDidBeginEditing(_ textView: UITextView) {
+            parent.isEditing = true
+        }
+        
+        func textViewDidEndEditing(_ textView: UITextView) {
+            parent.isEditing = false
+        }
+        
+        func textViewDidChange(_ textView: UITextView) {
+            parent.text = textView.text
         }
     }
 }
 
-
-fileprivate struct UITextViewWrapper: UIViewRepresentable {
-    typealias UIViewType = UITextView
-
-    @Binding var text: String
-    @Binding var calculatedHeight: CGFloat
-    var onDone: (() -> Void)?
-
-    func makeUIView(context: UIViewRepresentableContext<UITextViewWrapper>) -> UITextView {
-        let textField = UITextView()
-        textField.delegate = context.coordinator
-
-        textField.isEditable = true
-        textField.font = UIFont.preferredFont(forTextStyle: .body)
-        textField.isSelectable = true
-        textField.isUserInteractionEnabled = true
-        textField.isScrollEnabled = false
-        textField.backgroundColor = UIColor.clear
-        if nil != onDone {
-            textField.returnKeyType = .done
-        }
-
-        textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        return textField
-    }
-
-    func updateUIView(_ uiView: UITextView, context: UIViewRepresentableContext<UITextViewWrapper>) {
-        if uiView.text != self.text {
-            uiView.text = self.text
-        }
-        
-        UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
-    }
-
-    fileprivate static func recalculateHeight(view: UIView, result: Binding<CGFloat>) {
-        let newSize = view.sizeThatFits(CGSize(width: view.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
-        if result.wrappedValue != newSize.height {
-            DispatchQueue.main.async {
-                result.wrappedValue = newSize.height // !! must be called asynchronously
-            }
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(text: $text, height: $calculatedHeight, onDone: onDone)
-    }
-
-    final class Coordinator: NSObject, UITextViewDelegate {
-        var text: Binding<String>
-        var calculatedHeight: Binding<CGFloat>
-        var onDone: (() -> Void)?
-
-        init(text: Binding<String>, height: Binding<CGFloat>, onDone: (() -> Void)? = nil) {
-            self.text = text
-            self.calculatedHeight = height
-            self.onDone = onDone
-        }
-
-        func textViewDidChange(_ uiView: UITextView) {
-            text.wrappedValue = uiView.text
-            UITextViewWrapper.recalculateHeight(view: uiView, result: calculatedHeight)
-        }
-
-        func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if let onDone = self.onDone, text == "\n" {
-                textView.resignFirstResponder()
-                onDone()
-                return false
-            }
-            return true
-        }
+struct MultilineTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        MultilineTextField(
+            headerText: "Пример",
+            text: "",
+            placeholder: "Введите текст...",
+            textForegroundColor: .black
+        )
+        .padding()
     }
 }
